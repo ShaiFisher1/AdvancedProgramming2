@@ -1,4 +1,5 @@
 .App {
+  position: flex;
   text-align: center;
 }
 
@@ -38,11 +39,13 @@
 }
 
 .App-decor {
-  position: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
   color: #ADD8e6;
   background-color: #ADD8e6; 
   align-items: left;
   display: block;
   width: 2000px;
-  height: 300px;
+  height: 285px;
 }

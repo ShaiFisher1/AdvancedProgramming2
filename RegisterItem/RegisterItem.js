@@ -23,8 +23,7 @@ function RegisterItem(){
                                 </div>
                             </div>
                         </div>
-                            
-                                </Form.Group>
+                        </Form.Group>
                         <Form.Group className="mb-3" controlId="formPassword">
                             <div class="container">
                                 <div class="row">

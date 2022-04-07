@@ -1,4 +1,5 @@
 .RegisterItem {
+    position: flex;
     text-align: left;
 }
 
@@ -6,6 +7,7 @@
     width: 65rem;
     background: #f2f0ed;
     top: 0;
+    position: flex;
  }
 
 .col-3 {
@@ -20,7 +22,7 @@
 
 .RegisterItem-b {
     width: '15rem';
-     display: 'grid';
+    display: 'grid';
 }
 
 .RegisterItem-link {
