@@ -1,0 +1,88 @@
+.RegisterationItem {
+    position: flex;
+    text-align: left;
+}
+
+.RegisterationItem-card {
+    width: 65rem;
+    background: #f2f0ed;
+    top: 0;
+    position: flex;
+    text-align: center;
+ }
+
+.col-3 {
+    text-align: left;
+    color: black;
+    font-size: calc(2px + 2vmin);
+}
+
+.text-muted {
+    font-size: calc(7px + 1vmin);
+}
+
+.RegisterationItem-b {
+    width: '15rem';
+    display: 'grid';
+}
+
+.RegisterationItem-link {
+    font-size: calc(7px + 1vmin);
+}
+
+.page {
+    height: 100vh;
+    background-color: #512da8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-1 {
+    height: 230px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.heading {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: black;
+    font-size: calc(2px + 2vmin);
+}
+
+.img-holder {
+    margin: auto;
+    color: black;
+    width: 150px;
+    height: 150px;
+    border: 3px solid black;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+#input[type="file"] {
+    display: none;
+}
+
+.material-icons {
+    color: black;
+}
+
+.label {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: calc(2px + 2vmin);
+}
