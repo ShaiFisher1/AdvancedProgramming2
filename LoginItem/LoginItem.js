@@ -2,18 +2,20 @@ import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Form from 'react-bootstrap/Form'
 import Card from 'react-bootstrap/Card'
-import './RegisterItem.css';
+import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import './LoginItem.css';
+// import RegisterationItem from './RegisterationItem';
 
-
-function RegisterItem(){
+function LoginItem(){
     return (
         <div>
-            <Card className="RegisterItem-card"> 
+            <Card className="LoginItem-card"> 
                 <Card.Img src="https://media2.clevescene.com/clevescene/imager/u/slideshow/36345264/image2.jpg" />
                 <Card.Body>
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <div class="container">
+                            <div class="container">
                             <div class="row">
                                 <div class="col-3">
                                     <Form.Label>Username</Form.Label>
@@ -22,7 +24,7 @@ function RegisterItem(){
                                     <Form.Control type="username" placeholder="Enter username" />
                                 </div>
                             </div>
-                        </div>
+                          </div>
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formPassword">
                             <div class="container">
@@ -49,4 +51,4 @@ function RegisterItem(){
     );
 }
 
-export default RegisterItem;
+export default LoginItem;
