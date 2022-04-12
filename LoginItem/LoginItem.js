@@ -3,9 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Form from 'react-bootstrap/Form'
 import Card from 'react-bootstrap/Card'
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './LoginItem.css';
-// import RegisterationItem from './RegisterationItem';
 
 function LoginItem(){
     return (
@@ -32,14 +30,14 @@ function LoginItem(){
                                     <div class="col-3">
                                         <Form.Label>Password</Form.Label>
                                     </div>
-                                <div class="col">
+                                    <div class="col">
                                     <Form.Control type="password" placeholder="Password" />
                                 </div>    
                                 </div>
                             </div>    
                         </Form.Group>
                         <Form.Text className="text-muted">Not registered? </Form.Text>
-                        <a className="RegisterItem-link" href="https://reactjs.org">Click here</a>
+                        <a className="LoginItem-link" href="RegisterationItem">Click here</a>
                         <Form.Text className="text-muted"> to register</Form.Text>
                         <Button variant="primary" type="submit" style={{ width: '15rem', display: 'grid' }}>
                             Login

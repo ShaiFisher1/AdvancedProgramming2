@@ -1,9 +1,9 @@
-.LoginItem {
+.RegisterationItem {
     position: flex;
     text-align: left;
 }
 
-.LoginItem-card {
+.RegisterationItem-card {
     width: 65rem;
     background: #f2f0ed;
     top: 0;
@@ -21,11 +21,11 @@
     font-size: calc(7px + 1vmin);
 }
 
-.LoginItem-b {
+.RegisterationItem-b {
     width: '15rem';
     display: 'grid';
 }
 
-.LoginItem-link {
+.RegisterationItem-link {
     font-size: calc(7px + 1vmin);
 }
