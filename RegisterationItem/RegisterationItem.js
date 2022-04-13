@@ -8,7 +8,15 @@ import './RegisterationItem.css';
 export class ReisterationItem extends Component {
     state={
         profileImg:'https://hamiltonrykerit.com/wp-content/uploads/2015/07/blank-user.jpg'
-
+    }
+    imageHandler = (e) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+            if(reader.readyState === 2) {
+                this.setState({profileImg: reader.result})
+            }
+        }
+        reader.readAsDataURL(e.target.files[0])
     }
     render() {
         const {profileImg} = this.state
@@ -18,17 +26,18 @@ export class ReisterationItem extends Component {
                     <Card.Img src="https://media2.clevescene.com/clevescene/imager/u/slideshow/36345264/image2.jpg" />
                     <Card.Body>
                         <div clasName="page">
-                            <div className="container-1">
-                                <h1 className="heading">Add your image</h1>
-                                <div classame="img-holder">
-                                    <img src={profileImg} alt="" id="img" className="img"></img>
-                                </div>
-                                <input type="file" name="image-upload" id="input" accept="image/*"></input>
-                                <div className="label">
-                                    <label htmlFor="input" className="image-upload">
-                                        <i className="material-icons">add_photo_alternate</i>
-                                        Choose your photo
-                                    </label>
+                            <div class="container" className="container-1">
+                                <div class="row">
+                                    <div classame="img-holder">
+                                        <img src={profileImg} alt="" id="img" className="img"></img>
+                                    </div>
+                                    <input type="file" name="image-upload" id="input" accept="image/*" onChange={this.imageHandler}></input>
+                                    <div className="label">
+                                        <label htmlFor="input" className="image-upload">
+                                            <i className="material-icons">add_photo_alternate</i>
+                                                Choose your photo
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -82,10 +91,10 @@ export class ReisterationItem extends Component {
                                 </div>    
                             </Form.Group>
                             <Form.Text className="text-muted">Already registered? </Form.Text>
-                            <a className="RegisterationItem-link" href="LoginItem">Click here</a>
+                            <a className="LoginItem-link" href="\">Click here</a>
                             <Form.Text className="text-muted"> to login</Form.Text>
                             <Button variant="primary" type="submit" style={{ width: '15rem', display: 'grid' }}>
-                                Login
+                                Register
                             </Button>
                         </Form>
                     </Card.Body>

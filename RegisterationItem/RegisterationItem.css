@@ -39,35 +39,35 @@
 }
 
 .container-1 {
-    height: 230px;
-    width: 200px;
+    height: 200px;
+    width: 180px;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(161, 158, 153, 0.5);
 }
 
 .heading {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
     margin-top: 1rem;
-    font-weight: bold;
     color: black;
-    font-size: calc(2px + 2vmin);
+    font-size: 20px;
 }
 
 .img-holder {
-    margin: auto;
     color: black;
     width: 150px;
     height: 150px;
     border: 3px solid black;
     border-radius: 5px;
     margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 
 .img {
     width: 150px;
     height: 150px;
     object-fit: cover;
+    align-items: center;
+    margin-top: 1rem;
 }
 
 #input[type="file"] {
@@ -80,9 +80,18 @@
 
 .label {
     width: 100%;
-    margin-top: 1rem;
     display: flex;
     justify-content: center;
     color: black;
-    font-size: calc(2px + 2vmin);
+    font-size: 15px;
+}
+
+.text-pic {
+    margin-bottom: 1rem;
+    height: 30px;
+    margin-top: 10rem;
+}
+
+.image-upload {
+    cursor: pointer;
 }
