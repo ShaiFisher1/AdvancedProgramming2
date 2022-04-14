@@ -39,7 +39,7 @@ function LoginItem(){
                         <Form.Text className="text-muted">Not registered? </Form.Text>
                         <a className="LoginItem-link" href="RegisterationItem">Click here</a>
                         <Form.Text className="text-muted"> to register</Form.Text>
-                        <Button variant="primary" type="submit" style={{ width: '15rem', display: 'grid' }}>
+                        <Button variant="primary" type="submit" style={{ width: '15rem', display: 'grid' }} href="\ChatsItem">
                             Login
                         </Button>
                     </Form>

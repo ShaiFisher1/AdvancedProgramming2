@@ -23,15 +23,15 @@ export class ReisterationItem extends Component {
         return (
             <div>
                 <Card className="RegisterationItem-card"> 
-                    <Card.Img src="https://media2.clevescene.com/clevescene/imager/u/slideshow/36345264/image2.jpg" />
+                    <Card.Img className="card-image" src="https://media2.clevescene.com/clevescene/imager/u/slideshow/36345264/image2.jpg" />
                     <Card.Body>
-                        <div clasName="page">
+                        <div className="page">
                             <div class="container" className="container-1">
                                 <div class="row">
-                                    <div classame="img-holder">
-                                        <img src={profileImg} alt="" id="img" className="img"></img>
+                                    <div className="img-holder" required>
+                                        <img src={profileImg} alt="" id="img" className="img" required></img>
                                     </div>
-                                    <input type="file" name="image-upload" id="input" accept="image/*" onChange={this.imageHandler}></input>
+                                    <input type="file" name="image-upload" id="input" accept="image/*" onChange={this.imageHandler} required></input>
                                     <div className="label">
                                         <label htmlFor="input" className="image-upload">
                                             <i className="material-icons">add_photo_alternate</i>
@@ -49,7 +49,7 @@ export class ReisterationItem extends Component {
                                         <Form.Label>Username</Form.Label>
                                     </div>
                                     <div class="col">
-                                        <Form.Control type="username" placeholder="Enter username" />
+                                        <Form.Control type="username" placeholder="Enter username" required/>
                                     </div>
                                 </div>
                               </div>
@@ -61,7 +61,7 @@ export class ReisterationItem extends Component {
                                             <Form.Label>Password</Form.Label>
                                         </div>
                                     <div class="col">
-                                        <Form.Control type="password" placeholder="Password" />
+                                        <Form.Control type="password" placeholder="Password" required/>
                                     </div>    
                                     </div>
                                 </div>    
@@ -73,19 +73,19 @@ export class ReisterationItem extends Component {
                                             <Form.Label>Confirm password</Form.Label>
                                         </div>
                                     <div class="col">
-                                        <Form.Control type="password" placeholder="Confirm Password" />
+                                        <Form.Control type="password" placeholder="Confirm Password" required/>
                                     </div>    
                                     </div>
                                 </div>    
                             </Form.Group>
-                            <Form.Group className="mb-3" controlId="formPassword">
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-3">
-                                            <Form.Label>Display Name</Form.Label>
+                                            <Form.Label>Nickname</Form.Label>
                                         </div>
                                     <div class="col">
-                                        <Form.Control type="password" placeholder="Enter display name" />
+                                        <Form.Control type="username" placeholder="Enter nickname" required/>
                                     </div>    
                                     </div>
                                 </div>    

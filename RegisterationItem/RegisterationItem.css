@@ -11,6 +11,12 @@
     text-align: center;
  }
 
+ .card-image {
+     background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+     border: 3rem linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+
+ }
+
 .col-3 {
     text-align: left;
     color: black;
@@ -30,14 +36,6 @@
     font-size: calc(7px + 1vmin);
 }
 
-.page {
-    height: 100vh;
-    background-color: #512da8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .container-1 {
     height: 200px;
     width: 180px;
@@ -53,13 +51,13 @@
 }
 
 .img-holder {
-    color: black;
+    /* color: black;
     width: 150px;
     height: 150px;
     border: 3px solid black;
     border-radius: 5px;
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; */
 }
 
 .img {
