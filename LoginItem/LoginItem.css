@@ -1,0 +1,31 @@
+.LoginItem {
+    position: flex;
+    text-align: left;
+}
+
+.LoginItem-card {
+    width: 65rem;
+    background: #f2f0ed;
+    top: 0;
+    position: flex;
+    text-align: center;
+ }
+
+.col-3 {
+    text-align: left;
+    color: black;
+    font-size: calc(2px + 2vmin);
+}
+
+.text-muted {
+    font-size: calc(7px + 1vmin);
+}
+
+.LoginItem-b {
+    width: '15rem';
+    display: 'grid';
+}
+
+.LoginItem-link {
+    font-size: calc(7px + 1vmin);
+}

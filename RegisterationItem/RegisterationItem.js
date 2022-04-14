@@ -2,33 +2,44 @@ import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Form from 'react-bootstrap/Form'
 import Card from 'react-bootstrap/Card'
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import './RegisterationItem.css';
 
-export class ReisterationItem extends Component {
-    state={
-        profileImg:'https://hamiltonrykerit.com/wp-content/uploads/2015/07/blank-user.jpg'
+const Register = () => {
+    const [formIsValid, setFormIsValid] = useState(false);
+    const [enteredPass, setPass] = useState('');
+    const [enteredConfirmPass, setConfirmPass] = useState('');
+
+    
+    const passChangeHnadler = (event) => {
+        if (event.target.value.trim().length > 8) {
+            console.log("hello")
+            setFormIsValid(true);
+        }
+    }
+    const handlerButton = () => {
 
     }
-    render() {
-        const {profileImg} = this.state
-        return (
-            <div>
+
+    const urlimg  = 'https://hamiltonrykerit.com/wp-content/uploads/2015/07/blank-user.jpg'
+    return (
+        <div>
                 <Card className="RegisterationItem-card"> 
-                    <Card.Img src="https://media2.clevescene.com/clevescene/imager/u/slideshow/36345264/image2.jpg" />
+                    <Card.Img className="card-image" src="https://media2.clevescene.com/clevescene/imager/u/slideshow/36345264/image2.jpg" />
                     <Card.Body>
-                        <div clasName="page">
-                            <div className="container-1">
-                                <h1 className="heading">Add your image</h1>
-                                <div classame="img-holder">
-                                    <img src={profileImg} alt="" id="img" className="img"></img>
-                                </div>
-                                <input type="file" name="image-upload" id="input" accept="image/*"></input>
-                                <div className="label">
-                                    <label htmlFor="input" className="image-upload">
-                                        <i className="material-icons">add_photo_alternate</i>
-                                        Choose your photo
-                                    </label>
+                        <div className="page">
+                            <div class="container" className="container-1">
+                                <div class="row">
+                                    <div className="img-holder" required>
+                                        <img src={urlimg} alt="" id="img" className="img" required></img>
+                                    </div>
+                                    <input type="file" name="image-upload" id="input" accept="image/*"  required></input>
+                                    <div className="label">
+                                        <label htmlFor="input" className="image-upload">
+                                            <i className="material-icons">add_photo_alternate</i>
+                                                Choose your photo
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -40,7 +51,7 @@ export class ReisterationItem extends Component {
                                         <Form.Label>Username</Form.Label>
                                     </div>
                                     <div class="col">
-                                        <Form.Control type="username" placeholder="Enter username" />
+                                        <Form.Control type="username" placeholder="Enter username" required/>
                                     </div>
                                 </div>
                               </div>
@@ -52,7 +63,7 @@ export class ReisterationItem extends Component {
                                             <Form.Label>Password</Form.Label>
                                         </div>
                                     <div class="col">
-                                        <Form.Control type="password" placeholder="Password" />
+                                        <Form.Control type="password" onChange={passChangeHnadler} placeholder="Password" required/>
                                     </div>    
                                     </div>
                                 </div>    
@@ -64,40 +75,32 @@ export class ReisterationItem extends Component {
                                             <Form.Label>Confirm password</Form.Label>
                                         </div>
                                     <div class="col">
-                                        <Form.Control type="password" placeholder="Confirm Password" />
+                                        <Form.Control  type="password" placeholder="Confirm Password" required/>
                                     </div>    
                                     </div>
                                 </div>    
                             </Form.Group>
-                            <Form.Group className="mb-3" controlId="formPassword">
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-3">
-                                            <Form.Label>Display Name</Form.Label>
+                                            <Form.Label>Nickname</Form.Label>
                                         </div>
                                     <div class="col">
-                                        <Form.Control type="password" placeholder="Enter display name" />
+                                        <Form.Control type="username" placeholder="Enter nickname" required/>
                                     </div>    
                                     </div>
-                                </div>    
+                                </div>
                             </Form.Group>
                             <Form.Text className="text-muted">Already registered? </Form.Text>
-                            <a className="RegisterationItem-link" href="LoginItem">Click here</a>
+                            <a className="LoginItem-link" href="\">Click here" </a>
                             <Form.Text className="text-muted"> to login</Form.Text>
-                            <Button variant="primary" type="submit" style={{ width: '15rem', display: 'grid' }}>
-                                Login
-                            </Button>
-                            <Form.Text className="text-muted">Back to Login page </Form.Text>
-                            <a className="LoginItem-link" href="\">Click here</a>
-                            <Button variant="primary" type="submit" style={{ width: '15rem', display: 'grid' }}>
-                                Login
-                            </Button>
+                            <button className='' disabled={!formIsValid} onClick={handlerButton}>Register</button>
                         </Form>
                     </Card.Body>
                 </Card>    
             </div>
-        );
-    }
+    )
 }
 
-export default ReisterationItem;
+export default Register
