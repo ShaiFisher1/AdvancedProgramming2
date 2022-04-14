@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LoginItem from './LoginItem/LoginItem';
 import RegisterationItem from './RegisterationItem/RegisterationItem';
 import ChatsItem from './ChatsItem/ChatsItem';
-import Register from './RegisterationItem/RegisterationItem copy';
+import Register from './RegisterationItem/RegisterationItem';
 
 
 function App() {
