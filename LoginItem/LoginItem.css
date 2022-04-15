@@ -1,13 +1,14 @@
-.RegisterItem {
+.LoginItem {
     position: flex;
     text-align: left;
 }
 
-.RegisterItem-card {
+.LoginItem-card {
     width: 65rem;
     background: #f2f0ed;
     top: 0;
     position: flex;
+    text-align: center;
  }
 
 .col-3 {
@@ -20,11 +21,11 @@
     font-size: calc(7px + 1vmin);
 }
 
-.RegisterItem-b {
+.LoginItem-b {
     width: '15rem';
     display: 'grid';
 }
 
-.RegisterItem-link {
+.LoginItem-link {
     font-size: calc(7px + 1vmin);
 }
