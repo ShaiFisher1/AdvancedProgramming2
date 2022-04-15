@@ -2,9 +2,10 @@ import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Form from 'react-bootstrap/Form'
 import Card from 'react-bootstrap/Card'
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './LoginItem.css';
 
+  
 function LoginItem(){
     return (
         <div>
@@ -19,7 +20,7 @@ function LoginItem(){
                                     <Form.Label>Username</Form.Label>
                                 </div>
                                 <div class="col">
-                                    <Form.Control type="username" placeholder="Enter username" />
+                                    <Form.Control type="username" placeholder="Enter username" required/>
                                 </div>
                             </div>
                           </div>
@@ -31,7 +32,7 @@ function LoginItem(){
                                         <Form.Label>Password</Form.Label>
                                     </div>
                                     <div class="col">
-                                    <Form.Control type="password" placeholder="Password" />
+                                    <Form.Control type="password" placeholder="Password" required/>
                                 </div>    
                                 </div>
                             </div>    
@@ -39,7 +40,7 @@ function LoginItem(){
                         <Form.Text className="text-muted">Not registered? </Form.Text>
                         <a className="LoginItem-link" href="RegisterationItem">Click here</a>
                         <Form.Text className="text-muted"> to register</Form.Text>
-                        <Button variant="primary" type="submit" style={{ width: '15rem', display: 'grid' }} href="\ChatsItem">
+                        <Button variant="primary" type="submit" style={{ width: '15rem', display: 'grid' }} href="\ChatsItem" onclick="addUser(username, password, nickname, image)">
                             Login
                         </Button>
                     </Form>
