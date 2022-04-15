@@ -6,8 +6,19 @@ import React, { Component } from 'react';
 import './RegisterationItem.css';
 
 export class ReisterationItem extends Component {
-    state={
-        profileImg:'https://hamiltonrykerit.com/wp-content/uploads/2015/07/blank-user.jpg'
+    constructor (props) {
+        super(props);
+        this.state = {
+          username: '',
+          password: '',
+          confirmPassword: '',
+          nickname: '',
+          formErrors: {username: '', password: '', confirmPassword: ''},
+          uusernameValid: false,
+          passwordValid: false,
+          formValid: false,
+          profileImg:'https://hamiltonrykerit.com/wp-content/uploads/2015/07/blank-user.jpg'
+        }
     }
     imageHandler = (e) => {
         const reader = new FileReader();
