@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LoginItem from './LoginItem/LoginItem';
 import RegisterationItem from './RegisterationItem/RegisterationItem';
 import ChatsItem from './ChatsItem/ChatsItem';
+import Register from './RegisterationItem/RegisterationItem';
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
       <header className="App-header">
       <Router>
         <Routes>
-            <Route path='/RegisterationItem' element={<RegisterationItem/>}></Route>
+            <Route path='/RegisterationItem' element={<Register/>}></Route>
             <Route path='/' element={<LoginItem/>}></Route>
             <Route path='/ChatsItem' element={<ChatsItem/>}></Route>
         </Routes>
