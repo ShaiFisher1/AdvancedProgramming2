@@ -1,9 +1,7 @@
 export const usersData = new Map();
 
 export function addUser(username, password, nickname, image) {
-    if (validateUser) {
-        usersData.set(username, {username, password, nickname, image})
-    }
+    usersData.set(username, {username, password, nickname, image});
 }
 
 export function getUser(username) {
@@ -16,3 +14,4 @@ export function validateUser(username, password) {
     }
     return false;
 }
+
