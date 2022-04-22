@@ -4,6 +4,27 @@ import './ChatsItem.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import { addMessage } from'../ChatsItem/ChatsData.js';
+import MessageItem from '../ChatsItem/ChatsData.js';
+
+export const chat1 = [
+  {
+    type: "you",
+    msg: "Hi, How are you?",
+  },
+  {
+    type: "other",
+    msg: "I am fine.",
+  },
+  {
+    type: "other",
+    msg: "What about you?",
+  },
+  {
+      type: "you",
+      msg: "Good.",
+    },
+  ]
+ 
 
 
 export function Home(){
@@ -17,6 +38,12 @@ export function Home(){
         addMessage(str)
         document.getElementById('message-get').value = '';
     }
+
+
+    const messagesLists = chat1.map((message,key)=>{
+        return<MessageItem msg={message.msg} type={message.type} key={key}/>
+    }); 
+
     return (
      
       <div className="maincontainer">
@@ -116,6 +143,14 @@ export function Home(){
               </div>
             </div>
           </div>
+
+
+
+
+        
+
+
+
          
           <div class="col-7 px-0">
             <div class="bg-gray px-4 py-2 bg-light">
@@ -123,60 +158,7 @@ export function Home(){
                 <h6 class="mb-0" style={{color: 'black'}}>Contact1</h6>
             </div>
             <div class="px-4 py-5 chat-box bg-white">
-            
-              <div class="media w-50 mb-3"><img src="https://therichpost.com/wp-content/uploads/2020/06/avatar3.png" alt="user" width="50" class="rounded-circle" />
-                <div class="media-body ml-3">
-                  <div class="bg-light rounded py-2 px-3 mb-2">
-                    <p class="text-small mb-0 text-muted">Test which is a new approach all solutions</p>
-                  </div>
-                  <p class="small text-muted">12:00 PM | Aug 13</p>
-                </div>
-              </div>
-             
-              <div class="media w-50 ml-auto mb-3">
-                <div class="media-body">
-                  <div class="bg-primary rounded py-2 px-3 mb-2">
-                    <p class="text-small mb-0 text-white">Test which is a new approach to have all solutions</p>
-                  </div>
-                  <p class="small text-muted">12:00 PM | Aug 13</p>
-                </div>
-              </div>
-           
-              <div class="media w-50 mb-3"><img src="https://therichpost.com/wp-content/uploads/2020/06/avatar3.png" alt="user" width="50" class="rounded-circle" />
-                <div class="media-body ml-3">
-                  <div class="bg-light rounded py-2 px-3 mb-2">
-                    <p class="text-small mb-0 text-muted">Test, which is a new approach to have</p>
-                  </div>
-                  <p class="small text-muted">12:00 PM | Aug 13</p>
-                </div>
-              </div>
-             
-              <div class="media w-50 ml-auto mb-3">
-                <div class="media-body">
-                  <div class="bg-primary rounded py-2 px-3 mb-2">
-                    <p class="text-small mb-0 text-white">Apollo University, Delhi, India Test</p>
-                  </div>
-                  <p class="small text-muted">12:00 PM | Aug 13</p>
-                </div>
-              </div>
-             
-              <div class="media w-50 mb-3"><img src="https://therichpost.com/wp-content/uploads/2020/06/avatar3.png" alt="user" width="50" class="rounded-circle" />
-                <div class="media-body ml-3">
-                  <div class="bg-light rounded py-2 px-3 mb-2">
-                    <p class="text-small mb-0 text-muted">Test, which is a new approach</p>
-                  </div>
-                  <p class="small text-muted">12:00 PM | Aug 13</p>
-                </div>
-              </div>
-             
-              <div class="media w-50 ml-auto mb-3">
-                <div class="media-body">
-                  <div class="bg-primary rounded py-2 px-3 mb-2">
-                    <p class="text-small mb-0 text-white">Apollo University, Delhi, India Test</p>
-                  </div>
-                  <p class="small text-muted">12:00 PM | Aug 13</p>
-                </div>
-              </div>
+              {messagesLists}
             </div>
           
             <div class="message-footer">

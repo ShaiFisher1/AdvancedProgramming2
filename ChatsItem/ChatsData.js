@@ -1,23 +1,6 @@
+import { chat1 } from "./ChatsItem";
 
-// each message object needs to have a type, to know which person sent it and where to show it
-export const chat1 = [
-    {
-      type: "you",
-      msg: "Hi, How are you?",
-    },
-    {
-      type: "other",
-      msg: "I am fine.",
-    },
-    {
-      type: "other",
-      msg: "What about you?",
-    },
-    {
-        type: "you",
-        msg: "Good.",
-      },
-    ]
+
 
     export function addMessage(messageInserted,chat_id)
 {
@@ -26,3 +9,18 @@ export const chat1 = [
     console.log(chat1);
 
 }
+
+// todo change class to className
+function MessageItem({msg,type}){
+    return(
+        <div class="media w-50 mb-3"><img src="https://therichpost.com/wp-content/uploads/2020/06/avatar3.png" alt="user" width="50" class="rounded-circle" />
+        <div class="media-body ml-3">
+          <div class="bg-light rounded py-2 px-3 mb-2">
+            <p class="text-small mb-0 text-muted">{msg}</p>
+          </div>
+          <p class="small text-muted">{type}</p>
+        </div>
+      </div>
+    );
+}
+export default MessageItem
