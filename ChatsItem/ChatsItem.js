@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './ChatsItem.css';
 //Importing bootstrap and other modules
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -6,6 +6,11 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import { addMessage } from'../ChatsItem/ChatsData.js';
 import MessageItem from '../ChatsItem/ChatsData.js';
 import ContactItem from '../ChatsItem/ContactItem.js';
+import contact1 from './contact1.png'
+import contact2 from './contact2.png'
+import contact3 from './contact3.png'
+import contact4 from './contact4.png'
+import contact5 from './contact5.png'
 
 
 export const chat1 = [
@@ -22,8 +27,8 @@ export const chat1 = [
     msg: "What about you?",
   },
   {
-      type: "you",
-      msg: "Good.",
+    type: "you",
+    msg: "Good.",
     },
   ]
   
@@ -31,28 +36,33 @@ export const contacts = [
   {
     chatName: "contact1",
     lastMessage: "last1",
-    lastDate: "1 Dec"
+    lastDate: "1 Dec",
+    image: contact1
   },
   {
     chatName: "contact2",
     lastMessage: "last2",
-    lastDate: "2 Dec"
+    lastDate: "2 Dec",
+    image: contact2
   },
   {
     chatName: "contact3",
     lastMessage: "last3",
-    lastDate: "3 Dec"
+    lastDate: "3 Dec",
+    image: contact3
   },
   {
     chatName: "contact4",
     lastMessage: "last4",
-    lastDate: "4 Dec"
+    lastDate: "4 Dec",
+    image: contact4
     },
-    {
-      chatName: "contact5",
-      lastMessage: "last5 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
-      lastDate: "5 Dec"
-      }
+  {
+    chatName: "contact5",
+    lastMessage: "last5 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+    lastDate: "5 Dec",
+    image: contact5
+    }
   ]
  
 
@@ -61,21 +71,33 @@ export function Home(){
   
   // render() {
 
+    const EnterMessage=(event)=> {
+      if (event.keyCode === 13) {
+          newMessage()
+      }
+  }
+
     function newMessage()
     {
         var str = document.getElementById("message-get").value;
         addMessage(str)
+        updatechat1len(prevlen => prevlen +1)
         document.getElementById('message-get').value = '';
     }
-
 
     const messagesLists = chat1.map((message,key)=>{
         return<MessageItem msg={message.msg} type={message.type} key={key}/>
     }); 
 
     const ContactLists = contacts.map((contact,key)=>{
-      return<ContactItem chatName={contact.chatName} lastMessage={contact.lastMessage} lastDate={contact.lastDate} key={key}/>
+      return<ContactItem chatName={contact.chatName} lastMessage={contact.lastMessage} lastDate={contact.lastDate} contactImage={contact.image} key={key}/>
     }); 
+
+    const [chat1len,updatechat1len] = useState(chat1.length)
+
+    useEffect(() =>{
+        console.log("message added")
+    },[chat1len]);
 
     return (
      
@@ -105,7 +127,7 @@ export function Home(){
                   {ContactLists}
                  
                 </div>
-              </div>
+              </div>/
             </div>
           </div>
           <div class="col-7 px-0">
@@ -115,11 +137,12 @@ export function Home(){
             </div>
             <div class="px-4 py-5 chat-box bg-white">
               {messagesLists}
+              
             </div>
           
             <div class="message-footer">
                 <img src="https://raw.githubusercontent.com/SinthujanBalachandran/whatsapp-clone2/4441eea48b73f9ee0dc5eed856cba92a4ffb37c9/paper-clip.svg" alt=""></img>
-                <input type="text" id="message-get" placeholder="Type your message here..."></input>
+                <input type="text" onKeyDown={(e) => EnterMessage(e) } id="message-get" placeholder="Type your message here..."></input>
                 <button onClick={newMessage} id="button-addon2" type="button" class="btn btn-link"> <i class="fa fa-paper-plane"></i></button>
             </div>
           </div>

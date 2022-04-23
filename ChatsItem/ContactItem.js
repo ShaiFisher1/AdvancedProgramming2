@@ -1,10 +1,10 @@
 import { contacts } from "./ChatsItem";
 
 
-function ContactItem({chatName,lastMessage,lastDate}){
+function ContactItem({chatName,lastMessage,lastDate,contactImage}){
     return(
         <a href="#" class="list-group-item list-group-item-action list-group-item-light rounded-0">
-        <div class="media"><img src="https://therichpost.com/wp-content/uploads/2020/06/avatar2.png" alt="user" width="50" class="rounded-circle" />
+        <div class="media"><img src={contactImage} alt="user" width="50" class="rounded-circle" />
           <div class="media-body ml-4">
             <div class="d-flex align-items-center justify-content-between mb-1">
               <h6 class="mb-0">{chatName}</h6><small class="small font-weight-bold">{lastDate}</small>
