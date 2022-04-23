@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import { addMessage } from'../ChatsItem/ChatsData.js';
 import MessageItem from '../ChatsItem/ChatsData.js';
+import ContactItem from '../ChatsItem/ContactItem.js';
+
 
 export const chat1 = [
   {
@@ -24,8 +26,35 @@ export const chat1 = [
       msg: "Good.",
     },
   ]
+  
+export const contacts = [
+  {
+    chatName: "contact1",
+    lastMessage: "last1",
+    lastDate: "1 Dec"
+  },
+  {
+    chatName: "contact2",
+    lastMessage: "last2",
+    lastDate: "2 Dec"
+  },
+  {
+    chatName: "contact3",
+    lastMessage: "last3",
+    lastDate: "3 Dec"
+  },
+  {
+    chatName: "contact4",
+    lastMessage: "last4",
+    lastDate: "4 Dec"
+    },
+    {
+      chatName: "contact5",
+      lastMessage: "last5 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+      lastDate: "5 Dec"
+      }
+  ]
  
-
 
 export function Home(){
 // class Home extends React.Component {
@@ -42,6 +71,10 @@ export function Home(){
 
     const messagesLists = chat1.map((message,key)=>{
         return<MessageItem msg={message.msg} type={message.type} key={key}/>
+    }); 
+
+    const ContactLists = contacts.map((contact,key)=>{
+      return<ContactItem chatName={contact.chatName} lastMessage={contact.lastMessage} lastDate={contact.lastDate} key={key}/>
     }); 
 
     return (
@@ -69,89 +102,12 @@ export function Home(){
                       </div>
                     </div>
                   </a>
-                  <a href="#" class="list-group-item list-group-item-action list-group-item-light rounded-0">
-                    <div class="media"><img src="https://therichpost.com/wp-content/uploads/2020/06/avatar1.png" alt="user" width="50" class="rounded-circle" />
-                      <div class="media-body ml-4">
-                        <div class="d-flex align-items-center justify-content-between mb-1">
-                          <h6 class="mb-0">Contact2</h6><small class="small font-weight-bold">14 Dec</small>
-                        </div>
-                        <p class="font-italic text-muted mb-0 text-small">Begining of the last message sent</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#" class="list-group-item list-group-item-action list-group-item-light rounded-0">
-                    <div class="media"><img src="https://therichpost.com/wp-content/uploads/2020/06/avatar2.png" alt="user" width="50" class="rounded-circle" />
-                      <div class="media-body ml-4">
-                        <div class="d-flex align-items-center justify-content-between mb-1">
-                          <h6 class="mb-0">Contact3</h6><small class="small font-weight-bold">9 Nov</small>
-                        </div>
-                        <p class="font-italic text-muted mb-0 text-small">Begining of the last message sent</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#" class="list-group-item list-group-item-action list-group-item-light rounded-0">
-                    <div class="media"><img src="https://therichpost.com/wp-content/uploads/2020/06/avatar2.png" alt="user" width="50" class="rounded-circle" />
-                      <div class="media-body ml-4">
-                        <div class="d-flex align-items-center justify-content-between mb-1">
-                          <h6 class="mb-0">Contact4</h6><small class="small font-weight-bold">18 Oct</small>
-                        </div>
-                        <p class="font-italic text-muted mb-0 text-small">Begining of the last message sent</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#" class="list-group-item list-group-item-action list-group-item-light rounded-0">
-                    <div class="media"><img src="https://therichpost.com/wp-content/uploads/2020/06/avatar2.png" alt="user" width="50" class="rounded-circle" />
-                      <div class="media-body ml-4">
-                        <div class="d-flex align-items-center justify-content-between mb-1">
-                          <h6 class="mb-0">Jassa</h6><small class="small font-weight-bold">17 Oct</small>
-                        </div>
-                        <p class="font-italic text-muted mb-0 text-small">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#" class="list-group-item list-group-item-action list-group-item-light rounded-0">
-                    <div class="media"><img src="https://therichpost.com/wp-content/uploads/2020/06/avatar2.png" alt="user" width="50" class="rounded-circle" />
-                      <div class="media-body ml-4">
-                        <div class="d-flex align-items-center justify-content-between mb-1">
-                          <h6 class="mb-0">Jassa</h6><small class="small font-weight-bold">2 Sep</small>
-                        </div>
-                        <p class="font-italic text-muted mb-0 text-small">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#" class="list-group-item list-group-item-action list-group-item-light rounded-0">
-                    <div class="media"><img src="https://therichpost.com/wp-content/uploads/2020/06/avatar2.png" alt="user" width="50" class="rounded-circle" />
-                      <div class="media-body ml-4">
-                        <div class="d-flex align-items-center justify-content-between mb-1">
-                          <h6 class="mb-0">Jassa</h6><small class="small font-weight-bold">30 Aug</small>
-                        </div>
-                        <p class="font-italic text-muted mb-0 text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#" class="list-group-item list-group-item-action list-group-item-light rounded-0">
-                    <div class="media"><img src="https://therichpost.com/wp-content/uploads/2020/06/avatar2.png" alt="user" width="50" class="rounded-circle" />
-                      <div class="media-body ml-4">
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                          <h6 class="mb-0">Jassa4</h6><small class="small font-weight-bold">21 Aug</small>
-                        </div>
-                        <p class="font-italic text-muted mb-0 text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                      </div>
-                    </div>
-                  </a>
+                  {ContactLists}
+                 
                 </div>
               </div>
             </div>
           </div>
-
-
-
-
-        
-
-
-
-         
           <div class="col-7 px-0">
             <div class="bg-gray px-4 py-2 bg-light">
                 <div class="media"><img src="https://therichpost.com/wp-content/uploads/2020/06/avatar3.png" alt="user" width="30" class="rounded-circle" /></div>
