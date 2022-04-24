@@ -8,11 +8,9 @@ import { chat1 } from "./ChatsItem";
     chat1.push(message_obj)
     console.log(chat1);
     console.log(chat1.len);
-
-
 }
 
-// todo change class to className           <div className={type=="you" ? "bg-light rounded py-2 px-3 mb-2" : "bg-warning rounded py-2 px-3 mb-2"}>
+// todo change class to className
 
 function MessageItem({msg,type}){
     return(

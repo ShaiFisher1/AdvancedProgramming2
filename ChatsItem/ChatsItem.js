@@ -142,15 +142,13 @@ export function Home(){
           
             <div class="message-footer">
                 <img src="https://raw.githubusercontent.com/SinthujanBalachandran/whatsapp-clone2/4441eea48b73f9ee0dc5eed856cba92a4ffb37c9/paper-clip.svg" alt=""></img>
-                <input type="text" onKeyDown={(e) => EnterMessage(e) } id="message-get" placeholder="Type your message here..."></input>
+                <input type="text" onKeyDown={(e) => EnterMessage(e)} id="message-get" placeholder="Type your message here..."></input>
                 <button onClick={newMessage} id="button-addon2" type="button" class="btn btn-link"> <i class="fa fa-paper-plane"></i></button>
             </div>
           </div>
         </div>
       </div>
       </div>
-     
-      
 );
 }
 
