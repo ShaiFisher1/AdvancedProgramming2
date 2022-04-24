@@ -14,4 +14,3 @@ export function validateUser(username, password) {
     }
     return false;
 }
-

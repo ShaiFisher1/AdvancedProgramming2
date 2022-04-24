@@ -8,9 +8,6 @@ import './RegisterationItem.css';
 import { addUser } from'../UsersData/UsersData.js';
 import { Alert } from 'react-alert'
 
-
-
-
 function RegisterationItem() {
     let [profileImg, setProfileImg] = useState('https://hamiltonrykerit.com/wp-content/uploads/2015/07/blank-user.jpg')
     function imageHandler(e) {
@@ -28,13 +25,24 @@ function RegisterationItem() {
             alert("Please choose a profile picture.");
             return;
         }
-
+        if (username.length == 0) {
+            alert("Please fill out a username.");
+            return;
+        }
+        if (nickname.length == 0) {
+            alert("Please fill out a nickname.");
+            return;
+        }
         if (password.length < 8) {
             alert("Password should contain at least 8 characters.");
             return;
         }
         if (password != confirm) {
             alert("The password confirmarion does not match.");
+            return;
+        }
+        if (!(/\d/.test(password)) || !(/[a-zA-Z]/.test(password))) {
+            alert("Password must contain letters and numbers.");
             return;
         }
         addUser(username, password, nickname, profileImg);
