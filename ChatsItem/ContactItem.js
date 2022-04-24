@@ -1,8 +1,34 @@
 import { contacts } from "./ChatsItem";
+import React, { useEffect, useState } from 'react';
+import messagesLists2 from '../ChatsItem/ChatsData.js';
+import runnow from '../ChatsItem/ChatsItem.js';
 
 
-function ContactItem({chatName,lastMessage,lastDate,contactImage}){
+let currentContact = "default"
+
+export function GetcurrentContact(){
+    return currentContact
+}
+
+
+function ContactItem({chatName,lastMessage,lastDate,contactImage, onContactChange}){
+
+
+    // const [contactName,updateStateChat]=useState("default")
+    //   useEffect(() =>{
+    //   console.log("changes contact press")
+    //   },[contactName]);
+
+      function chatSelected(name) {
+        console.log("pressed on chat", name)
+        onContactChange(name);
+        // updateStateChat(name)
+        currentContact=name
+      }
+
+
     return(
+      <div onClick={() => chatSelected(chatName)}>
         <a href="#" class="list-group-item list-group-item-action list-group-item-light rounded-0">
         <div class="media"><img src={contactImage} alt="user" width="50" class="rounded-circle" />
           <div class="media-body ml-4">
@@ -13,6 +39,9 @@ function ContactItem({chatName,lastMessage,lastDate,contactImage}){
           </div>
         </div>
       </a>
+      </div>
     );
   }
   export default ContactItem
+
+

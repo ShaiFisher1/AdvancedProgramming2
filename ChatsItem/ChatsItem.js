@@ -4,6 +4,7 @@ import './ChatsItem.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import { addMessage } from'../ChatsItem/ChatsData.js';
+import { GetcurrentContact } from'../ChatsItem/ContactItem.js';
 import MessageItem from '../ChatsItem/ChatsData.js';
 import ContactItem from '../ChatsItem/ContactItem.js';
 import contact1 from './contact1.png'
@@ -11,27 +12,9 @@ import contact2 from './contact2.png'
 import contact3 from './contact3.png'
 import contact4 from './contact4.png'
 import contact5 from './contact5.png'
+import { chat1, chat2,chat3, chat4, chat5 } from './ChatsContent';
 
-
-export const chat1 = [
-  {
-    type: "you",
-    msg: "Hi, How are you?",
-  },
-  {
-    type: "other",
-    msg: "I am fine.",
-  },
-  {
-    type: "other",
-    msg: "What about you?",
-  },
-  {
-    type: "you",
-    msg: "Good.",
-    },
-  ]
-  
+    
 export const contacts = [
   {
     chatName: "contact1",
@@ -67,9 +50,7 @@ export const contacts = [
  
 
 export function Home(){
-// class Home extends React.Component {
-  
-  // render() {
+
 
     const EnterMessage=(event)=> {
       if (event.keyCode === 13) {
@@ -85,19 +66,66 @@ export function Home(){
         document.getElementById('message-get').value = '';
     }
 
-    const messagesLists = chat1.map((message,key)=>{
+    const messagesLists1 = chat1.map((message,key)=>{
         return<MessageItem msg={message.msg} type={message.type} key={key}/>
-    }); 
+  }); 
+
+    const messagesLists2 = chat2.map((message,key)=>{
+      return<MessageItem msg={message.msg} type={message.type} key={key}/>
+  }); 
+
+    const messagesLists3 = chat3.map((message,key)=>{
+      return<MessageItem msg={message.msg} type={message.type} key={key}/>
+  }); 
+
+  const messagesLists4 = chat4.map((message,key)=>{
+    return<MessageItem msg={message.msg} type={message.type} key={key}/>
+  }); 
+
+  const messagesLists5 = chat5.map((message,key)=>{
+    return<MessageItem msg={message.msg} type={message.type} key={key}/>
+  }); 
+
+
+
+     const [messagesHistory, setMessageHist] = useState(null)
+
+    const onContactChange = (contName) => {
+      if (contName=="contact1"){
+        setMessageHist(messagesLists1)
+      }
+      if (contName=="contact2"){
+        setMessageHist(messagesLists2)
+      }
+      if (contName=="contact3"){
+        setMessageHist(messagesLists3)
+      }
+      if (contName=="contact4"){
+        setMessageHist(messagesLists4)
+      }
+      if (contName=="contact5"){
+        setMessageHist(messagesLists5)
+      }
+
+      console.log("blabla", contName);
+    }
+
 
     const ContactLists = contacts.map((contact,key)=>{
-      return<ContactItem chatName={contact.chatName} lastMessage={contact.lastMessage} lastDate={contact.lastDate} contactImage={contact.image} key={key}/>
+      return<ContactItem onContactChange={onContactChange} chatName={contact.chatName} lastMessage={contact.lastMessage} lastDate={contact.lastDate} contactImage={contact.image} key={key}/>
     }); 
 
     const [chat1len,updatechat1len] = useState(chat1.length)
+    
 
     useEffect(() =>{
         console.log("message added")
     },[chat1len]);
+
+
+    const currentContact = GetcurrentContact()
+    console.log("shai", currentContact);
+
 
     return (
      
@@ -114,6 +142,7 @@ export function Home(){
               </div>
               <div class="messages-box">
                 <div class="list-group rounded-0">
+        
                   <a class="list-group-item list-group-item-action active text-white rounded-0">
                     <div class="media"><img src="https://therichpost.com/wp-content/uploads/2020/06/avatar3.png" alt="user" width="50" class="rounded-circle" />
                       <div class="media-body ml-4">
@@ -124,6 +153,7 @@ export function Home(){
                       </div>
                     </div>
                   </a>
+                  
                   {ContactLists}
                  
                 </div>
@@ -135,15 +165,15 @@ export function Home(){
                 <div class="media"><img src="https://therichpost.com/wp-content/uploads/2020/06/avatar3.png" alt="user" width="30" class="rounded-circle" /></div>
                 <h6 class="mb-0" style={{color: 'black'}}>Contact1</h6>
             </div>
-            <div class="px-4 py-5 chat-box bg-white">
-              {messagesLists}
-              
+            <div class="px-4 py-5 chat-box bg-white"> 
+              {messagesHistory}
             </div>
           
             <div class="message-footer">
                 <img src="https://raw.githubusercontent.com/SinthujanBalachandran/whatsapp-clone2/4441eea48b73f9ee0dc5eed856cba92a4ffb37c9/paper-clip.svg" alt=""></img>
                 <input type="text" onKeyDown={(e) => EnterMessage(e)} id="message-get" placeholder="Type your message here..."></input>
                 <button onClick={newMessage} id="button-addon2" type="button" class="btn btn-link"> <i class="fa fa-paper-plane"></i></button>
+                
             </div>
           </div>
         </div>

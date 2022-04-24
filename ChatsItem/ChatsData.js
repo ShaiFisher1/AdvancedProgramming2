@@ -1,4 +1,12 @@
-import { chat1 } from "./ChatsItem";
+import { chat1 } from './ChatsContent';
+
+
+
+
+//     export function chatPressed()
+// {
+//     console.log("ppppppppp")
+// }
 
 
 
