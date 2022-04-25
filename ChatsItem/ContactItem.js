@@ -1,7 +1,7 @@
-import { contacts } from "./ChatsItem";
 import React, { useEffect, useState } from 'react';
-import messagesLists2 from '../ChatsItem/ChatsData.js';
+import messagesLists2 from './MessageItem.js';
 import runnow from '../ChatsItem/ChatsItem.js';
+import {savedUsers} from './Users';
 
 
 let currentContact = "default"
