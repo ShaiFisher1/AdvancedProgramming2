@@ -18,7 +18,7 @@ function App() {
         <Routes>
             <Route path='/RegisterationItem' element={<Register/>}></Route>
             <Route path='/' element={<LoginItem/>}></Route>
-            <Route path='/ChatsItem' element={<ChatsItem/>}></Route>
+            <Route path="/ChatsItem/:userName" element={<ChatsItem/>}></Route>
         </Routes>
       </Router>
       </header>

@@ -6,20 +6,22 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, NavLink, Link, useNavigate  } from 'react-router-dom';
 import './LoginItem.css';
 import { validateUser } from'../UsersData/UsersData.js';
-
+import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function LoginItem(){
+    
     let navigate = useNavigate()
+
     function validate() {
-        console.log("username");
-        var username = document.getElementById("Username").value;
+        var userName = document.getElementById("Username").value;
         var password = document.getElementById("Password").value;
         if (password.length < 8) {
             alert("Password should contain at least 8 characters.");
             return;
         }
-        if (validateUser(username, password)) {
-            navigate("/ChatsItem");
+        if (validateUser(userName, password)) {
+            navigate(`/ChatsItem/${userName}`);
         }
         else {
             alert("Username or password are not correct.")
