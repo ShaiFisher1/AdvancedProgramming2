@@ -23,23 +23,23 @@
 
 const chat2 = [
     {
-        type: "you",
-        msg: "Hi, How are you?",
+        type: "other",
+        msg: "sdfsdfs?",
         time: "25/04/2022 | 13:29",
     },
     {
-        type: "other",
-        msg: "I am fine.",
+        type: "you",
+        msg: "2342342.",
         time: "25/04/2022 | 13:30",
     },
     {
         type: "other",
-        msg: "What about you?",
+        msg: "Whdfgdfgd",
         time: "25/04/2022 | 13:31",
     },
     {
         type: "you",
-        msg: "Good.",
+        msg: "dfgdfgdfgd",
         time: "25/04/2022 | 13:33",
         },
     ]
@@ -47,22 +47,22 @@ const chat2 = [
 const chat3 = [
     {
         type: "you",
-        msg: "Hi, How are you?",
+        msg: "Hifghfg, How are ghfgyou?",
         time: "25/04/2022 | 13:29",
     },
     {
         type: "other",
-        msg: "I am fine.",
+        msg: "I a234m 345345.",
         time: "25/04/2022 | 13:30",
     },
     {
         type: "other",
-        msg: "What about you?",
+        msg: "What 24234 you?",
         time: "25/04/2022 | 13:31",
     },
     {
         type: "you",
-        msg: "Good.",
+        msg: "fgxhgxdh.",
         time: "25/04/2022 | 13:33",
         },
     ]
@@ -70,22 +70,22 @@ const chat3 = [
 const chat4 = [
     {
         type: "you",
-        msg: "Hi, How are you?",
+        msg: "Hidfghw aredfgh?",
         time: "25/04/2022 | 13:29",
     },
     {
         type: "other",
-        msg: "I am fine.",
+        msg: "Iwetrt35645.",
         time: "25/04/2022 | 13:30",
     },
     {
         type: "other",
-        msg: "What about you?",
+        msg: "What ab2342?",
         time: "25/04/2022 | 13:31",
     },
     {
         type: "you",
-        msg: "Good.",
+        msg: "G234234234",
         time: "25/04/2022 | 13:33",
         },
     ]
@@ -94,22 +94,22 @@ const chat4 = [
 const chat5 = [
     {
         type: "you",
-        msg: "Hi, How are you?",
+        msg: "Hdfgdfgd?",
         time: "25/04/2022 | 13:29",
     },
     {
         type: "other",
-        msg: "I am fine.",
+        msg: "I dfsrewrwere.",
         time: "25/04/2022 | 13:30",
     },
     {
         type: "other",
-        msg: "What about you?",
+        msg: "pppppppppppppp?",
         time: "25/04/2022 | 13:31",
     },
     {
         type: "you",
-        msg: "Good.",
+        msg: "iiiiiiiiii.",
         time: "25/04/2022 | 13:33",
         },
     ]

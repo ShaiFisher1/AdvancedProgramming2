@@ -17,7 +17,14 @@ import { useLocation } from "react-router-dom";
 
 
 export function Home(){
-  
+
+
+  const EnterMessage=(event)=> {
+    if (event.keyCode === 13) {
+        newMessage()
+    }
+}
+
   const location = useLocation()
   const { userName } = useParams();
 
@@ -36,20 +43,39 @@ export function Home(){
    function addMessage(messageInserted,currentTime)
   {
     var message_obj = {type:"you",msg:messageInserted, time:currentTime}
-    chat1.push(message_obj)
+    console.log("cur cont is",currentcontact)
+    if(currentcontact==="contact1"){
+      chat1.push(message_obj)
+      updatechat1len(prevlen => prevlen +1)
+    }
+    else if(currentcontact==="contact2"){
+      chat2.push(message_obj)
+      updatechat2len(prevlen => prevlen +1)
+    }
+    else if(currentcontact==="contact3"){
+      chat3.push(message_obj)
+      updatechat3len(prevlen => prevlen +1)
+    }
+    else if(currentcontact==="contact4"){
+      chat4.push(message_obj)
+      updatechat4len(prevlen => prevlen +1)
+    }
+    else if(currentcontact==="contact5"){
+      chat5.push(message_obj)
+      updatechat5len(prevlen => prevlen +1)
+    }
+    else{
+      console.log("no press")
+    }
+
+    
   }
 
-    const EnterMessage=(event)=> {
-      if (event.keyCode === 13) {
-          newMessage()
-      }
-  }
-
+  
     function newMessage()
     {
         var str = document.getElementById("message-get").value;
         addMessage(str,getCurrentDate())
-        updatechat1len(prevlen => prevlen +1)
         document.getElementById('message-get').value = '';
     }
 
@@ -74,51 +100,84 @@ export function Home(){
     return<MessageItem msg={message.msg} type={message.type} time={message.time} key={key}/>
   }); 
 
-
-
+    const [currentcontactImg,setcurrentcontactImg] = useState(null)
+    const [currentcontact,setcurrentcontact] = useState("lala")
     const [messagesHistory, setMessageHist] = useState(null)
-
-    const onContactChange = (contName) => {
+    const onContactChange = (contName, contImg) => {
       if (contName=="contact1"){
         setMessageHist(messagesLists1)
+        setcurrentcontact("contact1")
+        setcurrentcontactImg(contImg)
       }
       if (contName=="contact2"){
         setMessageHist(messagesLists2)
+        setcurrentcontact("contact2")
+        setcurrentcontactImg(contImg)
       }
       if (contName=="contact3"){
         setMessageHist(messagesLists3)
+        setcurrentcontact("contact3")
+        setcurrentcontactImg(contImg)
       }
       if (contName=="contact4"){
         setMessageHist(messagesLists4)
+        setcurrentcontact("contact4")
+        setcurrentcontactImg(contImg)
       }
       if (contName=="contact5"){
         setMessageHist(messagesLists5)
+        setcurrentcontact("contact5")
+        setcurrentcontactImg(contImg)
       }
-
-      console.log("blabla", contName);
     }
+
+    function contactChange(name,messageListToSet,image){
+      setMessageHist(messageListToSet)
+      setcurrentcontact(name)
+      setcurrentcontactImg(image)
+    }
+
 
     const ContactLists = contacts.map((contact,key)=>{
       return<ContactItem onContactChange={onContactChange} chatName={contact.chatName} lastMessage={contact.lastMessage} lastDate={contact.lastDate} contactImage={contact.image} key={key}/>
     }); 
 
-    const [chat1len,updatechat1len] = useState(chat1.length)
 
+
+    const [chat1len,updatechat1len] = useState(chat1.length)
     useEffect(() =>{
-        console.log("message added", chat1len)
+      setMessageHist(messagesLists1)
     },[chat1len]);
 
-    const [contactsLen,contactsUpdate] = useState(contacts.length)
-
+    const [chat2len,updatechat2len] = useState(chat2.length)
     useEffect(() =>{
-        console.log("Contact added")
+      setMessageHist(messagesLists2)
+    },[chat2len]);
+
+    const [chat3len,updatechat3len] = useState(chat3.length)
+    useEffect(() =>{
+      setMessageHist(messagesLists3)
+    },[chat3len]);
+
+    const [chat4len,updatechat4len] = useState(chat4.length)
+    useEffect(() =>{
+      setMessageHist(messagesLists4)
+    },[chat4len]);
+
+    const [chat5len,updatechat5len] = useState(chat5.length)
+    useEffect(() =>{
+      setMessageHist(messagesLists5)
+    },[chat5len]);
+
+
+    
+
+    const [contactsLen,contactsUpdate] = useState(contacts.length)
+    useEffect(() =>{
+        console.log("entered chat")
     },[contactsLen]);
 
-    // shaiii 
-    const currentContact = GetcurrentContact()
-    console.log("shai", currentContact);
-
-
+    
     const closeButton=useRef();
 
     function addContact() {
@@ -187,16 +246,7 @@ export function Home(){
             </div>
             <div class="messages-box">
               <div class="list-group rounded-0">
-                <a class="list-group-item list-group-item-action active text-white rounded-0">
-                  <div class="media"><img src="https://therichpost.com/wp-content/uploads/2020/06/avatar3.png" alt="user" width="50" class="rounded-circle" />
-                    <div class="media-body ml-4">
-                      <div class="d-flex align-items-center justify-content-between mb-1">
-                        <h6 class="mb-0">Contact1</h6><small class="small font-weight-bold">25 Dec</small>
-                      </div>
-                      <p class="font-italic mb-0 text-small">Begining of the last message sent</p>
-                    </div>
-                  </div>
-                </a>
+                
                 {ContactLists}
                 
               </div>
@@ -205,8 +255,8 @@ export function Home(){
         </div>
         <div class="col-7 px-0">
           <div class="bg-gray px-4 py-2 bg-light">
-              <div class="media"><img src="https://therichpost.com/wp-content/uploads/2020/06/avatar3.png" alt="user" width="30" class="rounded-circle" /></div>
-              <h6 class="mb-0" style={{color: 'black'}}>Contact1</h6>
+              <div class="media"><img src={currentcontactImg} alt="user" width="30" class="rounded-circle" /></div>
+              <h6 class="mb-0" style={{color: 'black'}}>{currentcontact}</h6>
           </div>
           <div class="px-4 py-5 chat-box bg-white">
             {messagesHistory}

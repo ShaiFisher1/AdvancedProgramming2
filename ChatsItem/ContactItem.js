@@ -12,23 +12,16 @@ export function GetcurrentContact(){
 
 
 function ContactItem({chatName,lastMessage,lastDate,contactImage, onContactChange}){
-
-
-    // const [contactName,updateStateChat]=useState("default")
-    //   useEffect(() =>{
-    //   console.log("changes contact press")
-    //   },[contactName]);
-
-      function chatSelected(name) {
+  
+      function chatSelected(name, contactImage) {
         console.log("pressed on chat", name)
-        onContactChange(name);
-        // updateStateChat(name)
+        onContactChange(name,contactImage);
         currentContact=name
       }
 
 
     return(
-      <div onClick={() => chatSelected(chatName)}>
+      <div onClick={() => chatSelected(chatName, contactImage)}>
         <a href="#" class="list-group-item list-group-item-action list-group-item-light rounded-0">
         <div class="media"><img src={contactImage} alt="user" width="50" class="rounded-circle" />
           <div class="media-body ml-4">
