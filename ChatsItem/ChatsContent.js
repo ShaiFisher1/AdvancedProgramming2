@@ -52,7 +52,7 @@ const NicolasChat = [
         },
     ]
 
-const chat3 = [
+const DanielChat = [
     {
         type: "you",
         msgType: "text",
@@ -79,7 +79,7 @@ const chat3 = [
         },
     ]
 
-const chat4 = [
+const RobertChat = [
     {
         type: "you",
         msgType: "text",
