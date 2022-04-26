@@ -133,5 +133,9 @@ const chat5 = [
         time: "25/04/2022 | 13:33",
         },
     ]
+
+const emptyChat = [
+
+    ]
  
-    export { chat1, chat2, chat3, chat4, chat5 }
+    export { chat1, chat2, chat3, chat4, chat5,emptyChat }
