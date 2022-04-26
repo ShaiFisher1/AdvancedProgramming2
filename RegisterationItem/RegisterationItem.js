@@ -6,7 +6,6 @@ import React, { Component, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, NavLink, Link, useNavigate  } from 'react-router-dom';
 import './RegisterationItem.css';
 import { addUser } from'../UsersData/UsersData.js';
-import { Alert } from 'react-alert'
 
 function RegisterationItem() {
     let [profileImg, setProfileImg] = useState('https://hamiltonrykerit.com/wp-content/uploads/2015/07/blank-user.jpg')
