@@ -7,11 +7,10 @@
     
 }
 
-/* .media-body {
-    margin-left: 75%;
-    align-self: flex-end;
+.media-w-50 {
+    margin-left: 70%;
     width: fit-content;
-} */
+}
 
 .msg-img {
     display: flex;

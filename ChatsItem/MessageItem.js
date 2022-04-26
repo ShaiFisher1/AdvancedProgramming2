@@ -5,7 +5,7 @@ import useRecorder from '../Audio/Audio.js';
 function MessageItem({msg,type,time,msgType}){
   return(
     <div className={type=="you" ? "you" : "other"}>
-      <div className={type=="you" ? "media w-50 mb-3" : "media w-50"}>
+      <div className={type=="you" ? "media w-50 mb-3" : "media-w-50"}>
         <div className={type=="you" ? "media-body ml-3" : "media-body"}>
           <div className={type=="you" ? "bg-light rounded py-2 px-3 mb-2" : "bg-warning rounded py-2 px-3 mb-2"} id="message">
           {(() => {
@@ -21,7 +21,7 @@ function MessageItem({msg,type,time,msgType}){
               return (
                 <video className="msg-video" src={msg} alt="" controls></video>
               )
-            } else {
+            } else if (msgType=="audio") {
               return (
                 <audio className="msg-audio" src={msg} alt="" controls></audio>
               )

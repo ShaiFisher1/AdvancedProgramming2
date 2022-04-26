@@ -1,4 +1,4 @@
- const chat1 = [
+const ShaiChat = [
     {
       type: "you",
       msgType: "text",
@@ -25,29 +25,29 @@
       },
     ]
 
-const chat2 = [
+const NicolasChat = [
     {
         type: "you",
         msgType: "text",
-        msg: "Hi, How are you?",
+        msg: "dfgdfg?",
         time: "25/04/2022 | 13:29",
     },
     {
         type: "other",
         msgType: "text",
-        msg: "I am fine.",
+        msg: "I am dfgdfgdfg.",
         time: "25/04/2022 | 13:30",
     },
     {
         type: "other",
         msgType: "text",
-        msg: "What about you?",
+        msg: "What 363546 you?",
         time: "25/04/2022 | 13:31",
     },
     {
-        type: "you",
+        type: "other",
         msgType: "text",
-        msg: "Good.",
+        msg: "45645645.",
         time: "25/04/2022 | 13:33",
         },
     ]
@@ -56,25 +56,25 @@ const chat3 = [
     {
         type: "you",
         msgType: "text",
-        msg: "Hi, How are you?",
+        msg: "2342342342u?",
         time: "25/04/2022 | 13:29",
     },
     {
         type: "other",
         msgType: "text",
-        msg: "I am fine.",
+        msg: "I am fdgdgsdfdf.",
         time: "25/04/2022 | 13:30",
     },
     {
         type: "other",
         msgType: "text",
-        msg: "What about you?",
+        msg: "3453 ret45 you?",
         time: "25/04/2022 | 13:31",
     },
     {
         type: "you",
         msgType: "text",
-        msg: "Good.",
+        msg: "23423423423423.",
         time: "25/04/2022 | 13:33",
         },
     ]
@@ -83,25 +83,25 @@ const chat4 = [
     {
         type: "you",
         msgType: "text",
-        msg: "Hi, How are you?",
+        msg: "345345345345?",
         time: "25/04/2022 | 13:29",
     },
     {
         type: "other",
         msgType: "text",
-        msg: "I am fine.",
+        msg: "I 353 3453453.",
         time: "25/04/2022 | 13:30",
     },
     {
         type: "other",
         msgType: "text",
-        msg: "What about you?",
+        msg: "What66666666666666?",
         time: "25/04/2022 | 13:31",
     },
     {
         type: "you",
         msgType: "text",
-        msg: "Good.",
+        msg: "Go777777777777od.",
         time: "25/04/2022 | 13:33",
         },
     ]
@@ -111,27 +111,27 @@ const chat5 = [
     {
         type: "you",
         msgType: "text",
-        msg: "Hi, How are you?",
+        msg: "546456,45625624 How 4562 you?",
         time: "25/04/2022 | 13:29",
     },
     {
         type: "other",
         msgType: "text",
-        msg: "I am fine.",
+        msg: "============e.",
         time: "25/04/2022 | 13:30",
     },
     {
         type: "other",
         msgType: "text",
-        msg: "What about you?",
+        msg: "Wha76868678768?",
         time: "25/04/2022 | 13:31",
     },
     {
         type: "you",
         msgType: "text",
-        msg: "Good.",
+        msg: "]]]]]]]]]]]]]].",
         time: "25/04/2022 | 13:33",
         },
     ]
- 
-    export { chat1, chat2, chat3, chat4, chat5 }
+    export const chats = {"shai Fisher": ShaiChat, "Nicolas Cage": NicolasChat};
+    export { ShaiChat, NicolasChat, chat3, chat4, chat5 }

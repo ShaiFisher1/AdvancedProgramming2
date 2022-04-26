@@ -44,7 +44,7 @@ function RegisterationItem() {
             alert("Password must contain letters and numbers.");
             return;
         }
-        addUser(username, password, nickname, profileImg);
+        addUser(username, password, nickname, profileImg, null);
         alert("registered");
         navigate("/")
         return;

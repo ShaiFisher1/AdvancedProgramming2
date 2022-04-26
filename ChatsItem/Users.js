@@ -1,55 +1,67 @@
-import contact1 from './ContactImages/contact1.png'
-import contact2 from './ContactImages/contact2.png'
-import contact3 from './ContactImages/contact3.png'
-import contact4 from './ContactImages/contact4.png'
-import contact5 from './ContactImages/contact5.png'
+import MorPic from './UsersImages/MorPic.png'
+import ShaiPic from './UsersImages/ShaiPic.png'
+import DannyPic from './UsersImages/DannyPic.png'
+import RobertPic from './UsersImages/RobertPic.png'
 
- 
  const savedUsers = [
     {
-      chatName: "contact1",
-      lastMessage: "last1",
-      lastDate: "1 Dec",
-      image: contact1
+      username: "Mor Siman Tov",
+      nickname: "Mor",
+      password: "1234567u",
+      profileImg: MorPic,
+      lastMessage: "Hello",
+      lastDate: "1 Dec"
     },
     {
-      chatName: "contact2",
-      lastMessage: "last2",
-      lastDate: "2 Dec",
-      image: contact2
+      username: "Shai Fisher",
+      nickname: "Shai",
+      password: "12345shai",
+      profileImg: ShaiPic,
+      lastMessage: "hello honey",
+      lastDate: "3 Dec"
     },
     {
-      chatName: "contact3",
-      lastMessage: "last3",
-      lastDate: "3 Dec",
-      image: contact3
+      username: "Daniel Cohen",
+      nickname: "Danny",
+      password: "12345danny",
+      profileImg: DannyPic,
+      lastMessage: "Hey... How are you?",
+      lastDate: "3 Dec"
     },
     {
-      chatName: "contact4",
-      lastMessage: "last4",
-      lastDate: "4 Dec",
-      image: contact4
+      username: "Nicolas Cage",
+      nickname: "Nicolas",
+      password: "12345nico",
+      profileImg: DannyPic,
+      lastMessage: "I want to tell you something. Please don't tell anyone, it's very important...",
+      lastDate: "4 Dec"
       },
     {
-      chatName: "contact5",
-      lastMessage: "last5 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+      username: "Robert Taylor",
+      nickname: "Rob",
+      password: "123456rob",
+      profileImg: RobertPic,
+      lastMessage: "I know. Don't forget to bring it to work tommorow.",
       lastDate: "5 Dec",
-      image: contact5
       }
     ]
 
     const contacts = [
     {
-        chatName: "contact1",
-        lastMessage: "last5 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
-        lastDate: "1 Dec",
-        image: contact1
+      username: "Shai Fisher",
+      nickname: "Shai",
+      password: "12345shai",
+      profileImg: ShaiPic,
+      lastMessage: "hello honey",
+      lastDate: "3 Dec"
     },
     {
-        chatName: "contact2",
-        lastMessage: "last2",
-        lastDate: "2 Dec",
-        image: contact2
+      username: "Nicolas Cage",
+      nickname: "Nicolas",
+      password: "12345nico",
+      profileImg: DannyPic,
+      lastMessage: "I want to tell you something. Please don't tell anyone, it's very important...",
+      lastDate: "4 Dec"
     },
     ]    
 
