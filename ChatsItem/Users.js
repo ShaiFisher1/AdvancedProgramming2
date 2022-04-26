@@ -1,9 +1,8 @@
-import contact1 from './contact1.png'
-import contact2 from './contact2.png'
-import contact3 from './contact3.png'
-import contact4 from './contact4.png'
-import contact5 from './contact5.png'
- 
+import contact1 from './ContactImages/contact1.png'
+import contact2 from './ContactImages/contact2.png'
+import contact3 from './ContactImages/contact3.png'
+import contact4 from './ContactImages/contact4.png'
+import contact5 from './ContactImages/contact5.png'
  
  const savedUsers = [
     {

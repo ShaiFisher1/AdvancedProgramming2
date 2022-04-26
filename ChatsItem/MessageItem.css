@@ -1,9 +1,36 @@
 .you {
-    margin-left: auto;
 }
 
 .other {
-    margin-left: 150px;
-    margin-right: 0;
-    align-items: right;
+    width: 100%;
+    margin-left: auto;
+    
+}
+
+/* .media-body {
+    margin-left: 75%;
+    align-self: flex-end;
+    width: fit-content;
+} */
+
+.msg-img {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 150px;
+}
+
+.msg-video {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 150px;
+}
+
+.msg-audio {
+    color: blue;
+}
+
+#message {
+    width: fit-content
 }

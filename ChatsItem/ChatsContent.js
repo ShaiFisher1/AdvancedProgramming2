@@ -1,21 +1,25 @@
- const chat1 = [
+const chat1 = [
     {
       type: "you",
+      msgType: "text",
       msg: "Hi, How are you?",
       time: "25/04/2022 | 13:29",
     },
     {
       type: "other",
+      msgType: "text",
       msg: "I am fine.",
       time: "25/04/2022 | 13:30",
     },
     {
       type: "other",
+      msgType: "text",
       msg: "What about you?",
       time: "25/04/2022 | 13:31",
     },
     {
       type: "you",
+      msgType: "text",
       msg: "Good.",
       time: "25/04/2022 | 13:33",
       },
@@ -23,23 +27,27 @@
 
 const chat2 = [
     {
-        type: "other",
-        msg: "sdfsdfs?",
+        type: "you",
+        msgType: "text",
+        msg: "dfgdfg?",
         time: "25/04/2022 | 13:29",
     },
     {
-        type: "you",
-        msg: "2342342.",
+        type: "other",
+        msgType: "text",
+        msg: "I am dfgdfgdfg.",
         time: "25/04/2022 | 13:30",
     },
     {
         type: "other",
-        msg: "Whdfgdfgd",
+        msgType: "text",
+        msg: "What 363546 you?",
         time: "25/04/2022 | 13:31",
     },
     {
-        type: "you",
-        msg: "dfgdfgdfgd",
+        type: "other",
+        msgType: "text",
+        msg: "45645645.",
         time: "25/04/2022 | 13:33",
         },
     ]
@@ -47,22 +55,26 @@ const chat2 = [
 const chat3 = [
     {
         type: "you",
-        msg: "Hifghfg, How are ghfgyou?",
+        msgType: "text",
+        msg: "2342342342u?",
         time: "25/04/2022 | 13:29",
     },
     {
         type: "other",
-        msg: "I a234m 345345.",
+        msgType: "text",
+        msg: "I am fdgdgsdfdf.",
         time: "25/04/2022 | 13:30",
     },
     {
         type: "other",
-        msg: "What 24234 you?",
+        msgType: "text",
+        msg: "3453 ret45 you?",
         time: "25/04/2022 | 13:31",
     },
     {
         type: "you",
-        msg: "fgxhgxdh.",
+        msgType: "text",
+        msg: "23423423423423.",
         time: "25/04/2022 | 13:33",
         },
     ]
@@ -70,22 +82,26 @@ const chat3 = [
 const chat4 = [
     {
         type: "you",
-        msg: "Hidfghw aredfgh?",
+        msgType: "text",
+        msg: "345345345345?",
         time: "25/04/2022 | 13:29",
     },
     {
         type: "other",
-        msg: "Iwetrt35645.",
+        msgType: "text",
+        msg: "I 353 3453453.",
         time: "25/04/2022 | 13:30",
     },
     {
         type: "other",
-        msg: "What ab2342?",
+        msgType: "text",
+        msg: "What66666666666666?",
         time: "25/04/2022 | 13:31",
     },
     {
         type: "you",
-        msg: "G234234234",
+        msgType: "text",
+        msg: "Go777777777777od.",
         time: "25/04/2022 | 13:33",
         },
     ]
@@ -94,22 +110,26 @@ const chat4 = [
 const chat5 = [
     {
         type: "you",
-        msg: "Hdfgdfgd?",
+        msgType: "text",
+        msg: "546456,45625624 How 4562 you?",
         time: "25/04/2022 | 13:29",
     },
     {
         type: "other",
-        msg: "I dfsrewrwere.",
+        msgType: "text",
+        msg: "============e.",
         time: "25/04/2022 | 13:30",
     },
     {
         type: "other",
-        msg: "pppppppppppppp?",
+        msgType: "text",
+        msg: "Wha76868678768?",
         time: "25/04/2022 | 13:31",
     },
     {
         type: "you",
-        msg: "iiiiiiiiii.",
+        msgType: "text",
+        msg: "]]]]]]]]]]]]]].",
         time: "25/04/2022 | 13:33",
         },
     ]
