@@ -23,7 +23,7 @@ When running ```npm install``` installations are made according to this file
 * In order to log in with the user we created please enter the following:\
 **Username: Mor Siman Tov**\
 **Password: 1234567u**
-* Running the program leads to the Login screen (run by opening terminal and then ```npm `start```)
+* Running the program leads to the Login screen (run by opening terminal and then ```npm start```)
 * If not already registered, by pressing the Click here button you will be navigated to the Registration screen.
 * By entering a correct registered (and for now hard coded) username and password, you will be able to log in.\
   Onced logged in you will be navigated to the Chat screen
@@ -34,5 +34,4 @@ When running ```npm install``` installations are made according to this file
   * Sending a new voice message is done by clicking the link logo and then -\
     pressing once on the microphone logo - to start the recording, and by pressing again - the recording is stopped and sent
   * Sending a new photo/video is done by clicking the photo/video logo and choosing a photo/video to send
-* Adding a new contact is done by pressing the logo with the plus sign, and entering an existing (hard coded) contact.\
-  If an existing contact name was entered, the chat will appear with the message history.
+* Adding a new contact is done by pressing the logo with the plus sign, and entering an existing (hard coded) contact. If an existing contact name was entered, the chat will appear with the message history
