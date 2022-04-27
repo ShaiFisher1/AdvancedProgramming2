@@ -1,5 +1,6 @@
 # Advanced Programming 2 Web Client: 
 
+
 1. [About](#About)
 2. [Installation](#Installation)
 3. [Instructions](#Instructions)
@@ -10,13 +11,14 @@ The project has Registration screen, Login screen, and a Chat screen.
 
 
 ## Dependencies
-* react npm
-* requirements file?
-* imports
+* to do
+* to do
+* to do 
 
 
 ## Instructions
-* In order to log in to the user we created please enter the following Username: Mor Siman Tov Password:1234567u
+* In order to log in with the user we created please enter the following:
+**Username: Mor Siman Tov Password:1234567u**
 * Running the programs leads to the Login screen.
 * If you are not already registered, by pressing the Click here button you will be navigated to the Registration screen.
 * By entering a correct registered (and for now hard coded) username and password, you will be able to log in. Onced logged in you will be navigated to the Chat screen.
