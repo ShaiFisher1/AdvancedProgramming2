@@ -8,7 +8,9 @@
 ## About
 We created a Web client Using HTML, JavaScript, React, CSS.\
 The project has Registration screen, Login screen, and a Chat screen.\
-the project uses react-router and react-bootstrap packages.
+**The project uses react-router and react-bootstrap packages.**
+You can find the modules installed in package.json -> dependencies.\
+When running ```bash npm install``` installations are made according to this file
 
 
 ## Dependencies
