@@ -15,15 +15,15 @@ When running ```npm install``` installations are made according to this file
 
 ## Dependencies
 * Download Node.js : https://nodejs.org/en/ which includes NPM (a package manager for NODE. Js) and will be installed on your computer when you install Node.js. 
-* to do?
-* to do?
+* The project uses react-router and react-bootstrap packages.
+* Modules installed can be found in package.json -> dependencies
 
 
 ## Instructions
 * In order to log in with the user we created please enter the following:\
 **Username: Mor Siman Tov**\
-**Password:1234567u**
-* Running the program leads to the Login screen
+**Password: 1234567u**
+* Running the program leads to the Login screen (run by opening terminal and then ```npm `start```)
 * If not already registered, by pressing the Click here button you will be navigated to the Registration screen.
 * By entering a correct registered (and for now hard coded) username and password, you will be able to log in.\
   Onced logged in you will be navigated to the Chat screen
