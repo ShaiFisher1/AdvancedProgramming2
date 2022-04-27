@@ -12,7 +12,7 @@ import Register from './RegisterationItem/RegisterationItem';
 function App() {
   return (
     <div className="React FromApp">
-    <div class="opacity-75" className="App-decor">Regular shadow</div>
+    <div className="opacity-75" class="App-decor"></div>
       <header className="App-header">
       <Router>
         <Routes>

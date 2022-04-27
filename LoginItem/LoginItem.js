@@ -2,12 +2,11 @@ import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Form from 'react-bootstrap/Form'
 import Card from 'react-bootstrap/Card'
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, NavLink, Link, useNavigate  } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Link, useNavigate  } from 'react-router-dom';
 import './LoginItem.css';
 import { validateUser } from'../UsersData/UsersData.js';
-import { useLocation } from "react-router-dom";
-import { useParams } from "react-router-dom";
+
 
 function LoginItem(){
     
@@ -22,8 +21,7 @@ function LoginItem(){
         }
         if (validateUser(userName, password)) {
             navigate(`/ChatsItem/${userName}`);
-        }
-        else {
+        } else {
             alert("Username or password are not correct.")
             return;
         }
@@ -35,24 +33,24 @@ function LoginItem(){
                 <Card.Body>
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <div class="container">
-                            <div class="row">
-                                <div class="col-3">
+                            <div className="container">
+                            <div className="row">
+                                <div className="col-3">
                                     <Form.Label>Username</Form.Label>
                                 </div>
-                                <div class="col">
+                                <div className="col">
                                     <input type="username" className="form-control" id="Username" placeholder="Enter username" required/>
                                 </div>
                             </div>
                           </div>
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formPassword">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-3">
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col-3">
                                         <Form.Label>Password</Form.Label>
                                     </div>
-                                    <div class="col">
+                                    <div className="col">
                                     <input type="password" className="form-control" id="Password" placeholder="Password" required/>
                                 </div>    
                                 </div>

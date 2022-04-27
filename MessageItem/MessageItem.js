@@ -1,6 +1,4 @@
 import './MessageItem.css';
-import useRecorder from '../Audio/Audio.js';
-
 
 function MessageItem({msg,type,time,msgType}){
   return(
@@ -28,7 +26,7 @@ function MessageItem({msg,type,time,msgType}){
             }
           })()}
           </div>
-          <p class="small text-muted">{time}</p>
+          <p className="small text-muted">{time}</p>
       </div>
     </div>
     </div>

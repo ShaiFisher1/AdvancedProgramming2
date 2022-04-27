@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card'
 import React, { Component, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, NavLink, Link, useNavigate  } from 'react-router-dom';
 import './RegisterationItem.css';
-import { addUser } from'../UsersData/UsersData.js';
+import { addUser, isUserExists } from'../UsersData/UsersData.js';
 
 function RegisterationItem() {
     let [profileImg, setProfileImg] = useState('https://hamiltonrykerit.com/wp-content/uploads/2015/07/blank-user.jpg')
@@ -28,6 +28,10 @@ function RegisterationItem() {
             alert("Please fill out a username.");
             return;
         }
+        if (isUserExists(username)) {
+            alert("Username is already registered.");
+            return;
+        }
         if (nickname.length == 0) {
             alert("Please fill out a nickname.");
             return;
@@ -44,7 +48,7 @@ function RegisterationItem() {
             alert("Password must contain letters and numbers.");
             return;
         }
-        addUser(username, password, nickname, profileImg, null);
+        addUser(username, password, nickname, profileImg, new Map());
         alert("registered");
         navigate("/")
         return;
@@ -56,7 +60,7 @@ function RegisterationItem() {
                 <Card.Body>
                     <div className="page">
                         <div class="container" className="container-1">
-                            <div class="row">
+                            <div className="row">
                                 <div className="img-holder" required>
                                     <img src={profileImg} alt="" id="img" className="img"></img>
                                 </div>
@@ -72,48 +76,48 @@ function RegisterationItem() {
                     </div>
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <div class="container">
-                            <div class="row">
-                                <div class="col-3">
+                            <div className="container">
+                            <div className="row">
+                                <div className="col-3">
                                     <Form.Label>Username</Form.Label>
                                 </div>
-                                <div class="col">
+                                <div className="col">
                                     <input type="username" className="form-control" id="Username" placeholder="Enter username" required/>
                                 </div>
                             </div>
                           </div>
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formPassword">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-3">
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col-3">
                                         <Form.Label>Password</Form.Label>
                                     </div>
-                                <div class="col">
+                                <div className="col">
                                     <input type="password" className="form-control" id="Password" placeholder="Password" required/>
                                 </div>    
                                 </div>
                             </div>    
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formPassword">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-3">
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col-3">
                                         <Form.Label>Confirm password</Form.Label>
                                     </div>
-                                <div class="col">
+                                <div className="col">
                                     <input type="password" className="form-control" id="Confirm" placeholder="Confirm Password" required/>
                                 </div>    
                                 </div>
                             </div>    
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-3">
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col-3">
                                         <Form.Label>Nickname</Form.Label>
                                     </div>
-                                <div class="col">
+                                <div className="col">
                                     <input type="username" className="form-control" id="Nickname" placeholder="Enter nickname" required/>
                                 </div>    
                                 </div>

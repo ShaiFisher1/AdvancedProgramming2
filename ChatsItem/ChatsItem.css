@@ -71,21 +71,31 @@ strong{color: blue;}
   border-radius: 20px;
   font-size: 15px;
 } 
+
 .grey-header {
   display: flex;
   position: relative;
 }
+
 .img-icon {
-  flex: 1;
   width: 22px;
   height: 22px;
-  position: absolute;
+  position: initial;
+  margin-left: 95%;
   text-align: right;
   top: 27px;
   left: 405px;
 }
+.icon-add {
+  display: inline;
 
-/* Show the dropup menu on hover */
+}
+
+.button {
+  display: inline;
+  margin-left: 95%;
+}
+
 .btn-group:hover .dropdown-menu {
 background-color: transparent;
 display: block;
@@ -93,7 +103,6 @@ box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0);
 border: none;
 }
 
-/* Change the background color of the dropup button when the dropup content is shown */
 .btn-group:hover .dropbtn {
 background-color: #b9b3ae;
 }

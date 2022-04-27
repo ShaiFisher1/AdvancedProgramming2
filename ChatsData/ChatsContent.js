@@ -1,3 +1,8 @@
+/*
+   This file contains 5 chats of the 5 contacts specific of the user "Mor Siman Tov". 3 of them are already added  
+   and their chats can be accessed. The other 2 can be added by the "add" button on the top right of the screen chat.
+*/
+
 const ShaiChat = [
     {
       type: "you",
@@ -20,7 +25,7 @@ const ShaiChat = [
     {
       type: "you",
       msgType: "text",
-      msg: "Good.",
+      msg: "Good. Have a great day honey!",
       time: "25/04/2022 | 13:33",
       },
     ]
@@ -29,25 +34,31 @@ const NicolasChat = [
     {
         type: "you",
         msgType: "text",
-        msg: "dfgdfg?",
+        msg: "Hey, I tried to call you",
         time: "25/04/2022 | 13:29",
     },
     {
         type: "other",
         msgType: "text",
-        msg: "I am dfgdfgdfg.",
+        msg: "I know",
         time: "25/04/2022 | 13:30",
     },
     {
         type: "other",
         msgType: "text",
-        msg: "What 363546 you?",
+        msg: "are you listening? it's urgent.",
+        time: "25/04/2022 | 13:30",
+    },
+    {
+        type: "you",
+        msgType: "text",
+        msg: "Yes keep talking",
         time: "25/04/2022 | 13:31",
     },
     {
         type: "other",
         msgType: "text",
-        msg: "45645645.",
+        msg: "I want to tell you something. Please don't tell anyone...",
         time: "25/04/2022 | 13:33",
         },
     ]
@@ -56,82 +67,87 @@ const DanielChat = [
     {
         type: "you",
         msgType: "text",
-        msg: "2342342342u?",
+        msg: "Hey, how are you?",
         time: "25/04/2022 | 13:29",
     },
     {
         type: "other",
         msgType: "text",
-        msg: "I am fdgdgsdfdf.",
+        msg: "I am great. How is work?",
         time: "25/04/2022 | 13:30",
     },
     {
         type: "other",
         msgType: "text",
-        msg: "3453 ret45 you?",
+        msg: "Say hi to Michael for me",
         time: "25/04/2022 | 13:31",
     },
     {
         type: "you",
         msgType: "text",
-        msg: "23423423423423.",
+        msg: "Everything is great. I got a promotion recently",
         time: "25/04/2022 | 13:33",
         },
     ]
 
 const RobertChat = [
     {
-        type: "you",
+        type: "other",
         msgType: "text",
-        msg: "345345345345?",
+        msg: "I got you the book you wanted.",
         time: "25/04/2022 | 13:29",
     },
     {
-        type: "other",
+        type: "you",
         msgType: "text",
-        msg: "I 353 3453453.",
+        msg: "Which book?",
         time: "25/04/2022 | 13:30",
     },
     {
         type: "other",
         msgType: "text",
-        msg: "What66666666666666?",
+        msg: "Pride and prejudice",
         time: "25/04/2022 | 13:31",
     },
     {
         type: "you",
         msgType: "text",
-        msg: "Go777777777777od.",
+        msg: "Wow, thank you so much!",
+        time: "25/04/2022 | 13:33",
+        },
+    ]
+    
+const AlissaChat = [
+    {
+        type: "you",
+        msgType: "text",
+        msg: "hi Alissa, what's up?",
+        time: "25/04/2022 | 13:29",
+    },
+    {
+        type: "other",
+        msgType: "text",
+        msg: "Hi Mor, I missed you!!",
+        time: "25/04/2022 | 13:30",
+    },
+    {
+        type: "you",
+        msgType: "text",
+        msg: "missed you too! We have to get together soon.",
+        time: "25/04/2022 | 13:31",
+    },
+    {
+        type: "other",
+        msgType: "text",
+        msg: "I agree! Are you free next monday?",
         time: "25/04/2022 | 13:33",
         },
     ]
 
-    
-const chat5 = [
-    {
-        type: "you",
-        msgType: "text",
-        msg: "546456,45625624 How 4562 you?",
-        time: "25/04/2022 | 13:29",
-    },
-    {
-        type: "other",
-        msgType: "text",
-        msg: "============e.",
-        time: "25/04/2022 | 13:30",
-    },
-    {
-        type: "other",
-        msgType: "text",
-        msg: "Wha76868678768?",
-        time: "25/04/2022 | 13:31",
-    },
-    {
-        type: "you",
-        msgType: "text",
-        msg: "]]]]]]]]]]]]]].",
-        time: "25/04/2022 | 13:33",
-        },
-    ]
-    export const chats = {"shai Fisher": ShaiChat, "Nicolas Cage": NicolasChat};
-    export { ShaiChat, NicolasChat, chat3, chat4, chat5 }
+export const chats = [{name: "Shai Fisher", chat: ShaiChat}, 
+                      {name: "Nicolas Cage", chat: NicolasChat}, 
+                      {name: "Daniel Cohen", chat: DanielChat}, 
+                      {name: "Robert Taylor", chat: RobertChat}, 
+                      {name: "Alissa Violet", chat: AlissaChat},]
+
+export { ShaiChat, NicolasChat, DanielChat, RobertChat, AlissaChat }
