@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import MessageItem from '../MessageItem/MessageItem.js';
 import ContactItem from '../ContactItem/ContactItem.js';
-import { allChats, MorChats, ShaiChat, NicolasChat, DanielChat, RobertChat, AlissaChat } from '../ChatsData/ChatsContent';
+import { allChats, ShaiChat, NicolasChat, DanielChat, RobertChat, AlissaChat, EmmaChat } from '../ChatsData/ChatsContent';
 import { useParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
@@ -58,6 +58,10 @@ export function Home(){
     else if (currentcontact==="Alissa Violet") {
       AlissaChat.push(message_obj)
       updateAlissachatlen(prevlen => prevlen+1)
+    } 
+    else if (currentcontact==="Emma Watson") {
+      EmmaChat.push(message_obj)
+      updateEmmachatlen(prevlen => prevlen+1)
     } else {
       alert("Choose a contact to send a message.")
     }
@@ -82,18 +86,6 @@ export function Home(){
   const messagesLists1 = ShaiChat.map((message,key)=>{
       return<MessageItem msg={message.msg} type={message.type} time={message.time} msgType={message.msgType} key={key}/>   
   }); 
-  // const messagesLists5 = AlissaChat.map((message,key)=>{
-  //   for (var i in usersData.get(userName).chats) {
-  //     if (usersData.get(userName).chats[i].name == "Alissa Violet") {
-  //       if (usersData.get(userName).chats[i].chat.length === 0) {
-  //         return;
-  //       }
-  //       else {
-  //         return<MessageItem msg={message.msg} type={message.type} time={message.time} msgType={message.msgType} key={key}/>
-  //       }
-  //     }
-  //   }
-  // }); 
 
   const messagesLists2 = NicolasChat.map((message,key)=>{
       return<MessageItem msg={message.msg} type={message.type} time={message.time} msgType={message.msgType} key={key}/>
@@ -111,6 +103,10 @@ export function Home(){
     return<MessageItem msg={message.msg} type={message.type} time={message.time} msgType={message.msgType} key={key}/>
   }); 
 
+  const messagesLists6 = EmmaChat.map((message,key)=>{
+    return<MessageItem msg={message.msg} type={message.type} time={message.time} msgType={message.msgType} key={key}/>
+  }); 
+
   const emptychat = []
   const defaultmessagelist = emptychat.map((message,key)=>{
     return<MessageItem msg={message.msg} type={message.type} time={message.time} msgType={message.msgType} key={key}/>
@@ -121,7 +117,7 @@ export function Home(){
   const [currentcontact,setcurrentcontact] = useState("")
   const [messagesHistory, setMessageHist] = useState(null)
 
-  const contacts_messages = {"Shai Fisher": messagesLists1, "Nicolas Cage": messagesLists2, "Daniel Cohen": messagesLists3, "Robert Taylor": messagesLists4, "Alissa Violet": messagesLists5}
+  const contacts_messages = {"Shai Fisher": messagesLists1, "Nicolas Cage": messagesLists2, "Daniel Cohen": messagesLists3, "Robert Taylor": messagesLists4, "Alissa Violet": messagesLists5, "Emma Watson": messagesLists6}
 
   const onContactChange = (contName, contNickname, contImg) => {
     setMessageHist(contacts_messages[contName])
@@ -130,16 +126,8 @@ export function Home(){
     setcurrentcontactImg(contImg)
   }
 
-  // const ContactLists = usersData.get(userName).chats.map((chatItem,key)=>{
-  //   if (chatItem.chat.length) {
-  //     return<ContactItem onContactChange={onContactChange} username={chatItem.name} nickname={usersData.get(chatItem.name).nickname} lastMessage={chatItem.chat.at(-1).msg} lastDate={chatItem.chat.at(-1).time} contactImage={(usersData.get(chatItem.name)).profileImage} key={key}/>
-  //   } else {
-  //     return<ContactItem onContactChange={onContactChange} username={chatItem.name} nickname={usersData.get(chatItem.name).nickname} lastMessage={""} lastDate={""} contactImage={(usersData.get(chatItem.name)).profileImage} key={key}/>
-  //   }
-  // }); 
-
   const ContactLists = usersData.get(userName).chats.map((chatItem,key)=>{
-      return<ContactItem onContactChange={onContactChange} username={chatItem.name} nickname={usersData.get(chatItem.name).nickname} lastMessage={chatItem.chat.at(-1).msg} msgType={chatItem.chat.at(-1).msgType} contactImage={(usersData.get(chatItem.name)).profileImage} key={key}/>
+      return<ContactItem onContactChange={onContactChange} username={chatItem.name} nickname={usersData.get(chatItem.name).nickname} lastMessage={chatItem.chat.at(-1).msg} msgType={chatItem.chat.at(-1).msgType} lastDate={chatItem.chat.at(-1).time} contactImage={(usersData.get(chatItem.name)).profileImage} key={key}/>
   }); 
 
   const [Shaichatlen,updateShaichatlen] = useState(ShaiChat.length)
@@ -166,6 +154,11 @@ export function Home(){
   useEffect(() =>{
     setMessageHist(messagesLists5)
   },[Alissachatlen]);
+
+  const [Emmachatlen,updateEmmachatlen] = useState(EmmaChat.length)
+  useEffect(() =>{
+    setMessageHist(messagesLists5)
+  },[Emmachatlen]);
 
   const [contactsLen,contactsUpdate] = useState(usersData.get(userName).contacts.length)
   useEffect(() =>{
@@ -202,38 +195,6 @@ export function Home(){
     } 
     document.getElementById("Username").value = '';
   }
-
-  // function addContact() {
-  //   var contact = document.getElementById("Username").value;
-  //   if (contact===userName) {
-  //     alert("Error: user can not add itself.")
-  //   }
-  //   else if (usersData.get(userName).contacts.has(contact)) {
-  //     alert("Contact was already added.")
-  //   }
-  //   else if (usersData.has(contact)) {
-  //     if (userName === "Mor Siman Tov") {
-  //       for (var i in allChats) {
-  //         if (allChats[i].name === contact) {
-  //           var chat_obj = {name: contact, chat: allChats[i].chat,}
-  //           usersData.get(userName).contacts.set(contact, allChats[i].chat);
-  //           usersData.get(userName).chats.push(chat_obj)
-  //           console.log(usersData.get(userName).chats)
-  //         }
-  //     }
-  //     } else {
-  //       var chat_obj = {name: contact, chat: [],}
-  //       usersData.get(userName).contacts.set(contact, []);
-  //       usersData.get(userName).chats.push(chat_obj)
-  //     }
-  //     closeButton.current.click();
-  //     contactsUpdate(prevcontactsLen => prevcontactsLen + 1);
-  //     alert("Contact added.")
-  //   } else {
-  //     alert("Contact not found.")
-  //   } 
-  //   document.getElementById("Username").value = '';
-  // }
 
   let [audioURL, isRecording, startRecording, stopRecording] = useRecorder();
   

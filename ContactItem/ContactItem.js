@@ -20,25 +20,27 @@ function ContactItem({onContactChange, username, nickname, lastMessage, msgType,
             <div className="d-flex align-items-center justify-content-between mb-1">
               <h6 className="mb-0">{nickname}</h6><small className="small text-muted" id="contact-time">{lastDate}</small>
             </div>
-            {(() => {
-              if (msgType=="text") {
-                return (
-                  <p className="font-italic text-muted mb-0 text-small">{lastMessage}</p>
-                )
-              } else if (msgType=="image") {
-                return (
-                  <i class="bi bi-camera-fill"></i>
-                )
-              } else if (msgType=="video") {
-                return (
-                  <i class="bi bi-camera-video-fill"></i>
-                )
-              } else if (msgType=="audio") {
-                return (
-                  <i class="bi bi-mic-fill"></i>
-                )
-            }
-            })()}
+            <div>
+              {(() => {
+                if (msgType=="text") {
+                  return (
+                    <p className="font-italic text-muted mb-0 text-small">{lastMessage}</p>
+                  )
+                } else if (msgType=="image") {
+                  return (
+                    <i class="bi bi-camera-fill"></i>
+                  )
+                } else if (msgType=="video") {
+                  return (
+                    <i class="bi bi-camera-video-fill"></i>
+                  )
+                } else if (msgType=="audio") {
+                  return (
+                    <i class="bi bi-mic-fill"></i>
+                  )
+              }
+              })()}
+            </div>
           </div>
         </div>
       </a>
