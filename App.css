@@ -39,6 +39,8 @@
 }
 
 .App-decor {
+  display: flex;
+  width: 100%;
   position: absolute;
   left: 0;
   top: 0;
@@ -47,6 +49,5 @@
   background-color: #ADD8e6; 
   align-items: left;
   display: block;
-  width: 2000px;
   height: 180px;
 }

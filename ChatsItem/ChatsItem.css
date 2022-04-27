@@ -34,6 +34,17 @@ body {
   justify-items: flex-start;
   overflow-y: scroll;
 }
+
+#container {
+  display: flex;
+  align-items: center;
+}
+
+#main-window {
+  display: flex;
+  width: 70vw;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -71,21 +82,57 @@ strong{color: blue;}
   border-radius: 20px;
   font-size: 15px;
 } 
-.grey-header {
+
+.image-holder {
+  object-fit: contain;
   display: flex;
-  position: relative;
-}
-.img-icon {
-  flex: 1;
-  width: 22px;
-  height: 22px;
-  position: absolute;
-  text-align: right;
-  top: 27px;
-  left: 405px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+
 }
 
-/* Show the dropup menu on hover */
+.img-icon {
+  width: 22px;
+  height: 22px;
+  position: initial;
+  text-align: right;
+  display: flex;
+  align-items: flex-end;
+
+}
+
+.icon-add {
+  display: inline;
+
+}
+
+#grey-header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+
+.username-picture {
+  display: flex;
+  flex-direction: column;
+  width: 77%;
+  align-items: flex-start;
+  width: 95%;
+}
+
+#user-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  display: inline;
+  margin-left: 95%;
+}
+
 .btn-group:hover .dropdown-menu {
 background-color: transparent;
 display: block;
@@ -93,7 +140,6 @@ box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0);
 border: none;
 }
 
-/* Change the background color of the dropup button when the dropup content is shown */
 .btn-group:hover .dropbtn {
 background-color: #b9b3ae;
 }

@@ -12,13 +12,13 @@ import Register from './RegisterationItem/RegisterationItem';
 function App() {
   return (
     <div className="React FromApp">
-    <div class="opacity-75" className="App-decor">Regular shadow</div>
+    <div className="opacity-75" class="App-decor"></div>
       <header className="App-header">
       <Router>
         <Routes>
             <Route path='/RegisterationItem' element={<Register/>}></Route>
             <Route path='/' element={<LoginItem/>}></Route>
-            <Route path='/ChatsItem' element={<ChatsItem/>}></Route>
+            <Route path="/ChatsItem/:userName" element={<ChatsItem/>}></Route>
         </Routes>
       </Router>
       </header>
