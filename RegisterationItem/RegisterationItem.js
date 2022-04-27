@@ -6,9 +6,12 @@ import React, { Component, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, NavLink, Link, useNavigate  } from 'react-router-dom';
 import './RegisterationItem.css';
 import { addUser, isUserExists } from'../UsersData/UsersData.js';
+import LoginAndRegisterImg from '../Images/LoginAndRegisterImg.png'
+import DefaultAddImage from '../Images/DefaultAddImage.png'
+
 
 function RegisterationItem() {
-    let [profileImg, setProfileImg] = useState('https://hamiltonrykerit.com/wp-content/uploads/2015/07/blank-user.jpg')
+    let [profileImg, setProfileImg] = useState(DefaultAddImage)
     function imageHandler(e) {
         setProfileImg(URL.createObjectURL(e.target.files[0]))
     }
@@ -20,7 +23,7 @@ function RegisterationItem() {
         var password = document.getElementById("Password").value;
         var nickname = document.getElementById("Nickname").value;
         var confirm = document.getElementById("Confirm").value;
-        if (profileImg === 'https://hamiltonrykerit.com/wp-content/uploads/2015/07/blank-user.jpg') {
+        if (profileImg === DefaultAddImage) {
             alert("Please choose a profile picture.");
             return;
         }
@@ -56,7 +59,7 @@ function RegisterationItem() {
     return (
         <div>
             <Card className="RegisterationItem-card"> 
-                <Card.Img className="card-image" src="https://media2.clevescene.com/clevescene/imager/u/slideshow/36345264/image2.jpg" />
+                <Card.Img className="card-image" src={LoginAndRegisterImg} />
                 <Card.Body>
                     <div className="page">
                         <div class="container" className="container-1">

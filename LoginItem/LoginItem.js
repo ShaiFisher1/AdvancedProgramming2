@@ -6,6 +6,8 @@ import React from 'react';
 import { BrowserRouter as Router, Link, useNavigate  } from 'react-router-dom';
 import './LoginItem.css';
 import { validateUser } from'../UsersData/UsersData.js';
+import LoginAndRegisterImg from '../Images/LoginAndRegisterImg.png'
+
 
 
 function LoginItem(){
@@ -29,7 +31,7 @@ function LoginItem(){
     return (
         <div>
             <Card className="LoginItem-card"> 
-                <Card.Img src="https://media2.clevescene.com/clevescene/imager/u/slideshow/36345264/image2.jpg" />
+                <Card.Img src={LoginAndRegisterImg} />
                 <Card.Body>
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
