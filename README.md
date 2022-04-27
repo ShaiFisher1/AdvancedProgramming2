@@ -12,8 +12,7 @@ the project uses react-router and react-bootstrap packages.
 
 
 ## Dependencies
-* Download Node.js : https://nodejs.org/en/ which includes NPM (a package manager for NODE. Js) and will be installed\
-  on your computer when you install Node.js. 
+* Download Node.js : https://nodejs.org/en/ which includes NPM (a package manager for NODE. Js) and will be installed on your computer when you install Node.js. 
 * to do?
 * to do?
 
