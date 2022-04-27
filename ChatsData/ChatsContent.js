@@ -3,6 +3,12 @@
    and their chats can be accessed. The other 2 can be added by the "add" button on the top right of the screen chat.
 */
 
+import TextImage from '../Images/TextImage.png'
+import maldivesVideo from '../Images/maldivesVideo.mp4'
+import audio from '../Images/audio.ogg'
+
+
+
 const ShaiChat = [
     {
       type: "you",
@@ -25,9 +31,28 @@ const ShaiChat = [
     {
       type: "you",
       msgType: "text",
-      msg: "Good. Have a great day honey!",
+      msg: "I'm good. take a look at my University cool logo:",
       time: "25/04/2022 | 13:33",
       },
+
+    {
+    type: "you",
+    msgType: "image",
+    msg: TextImage,
+    time: "25/04/2022 | 13:33",
+    },
+    {
+        type: "you",
+        msgType: "text",
+        msg: "Isn't it the best?",
+        time: "25/04/2022 | 13:33",
+        },
+    {
+        type: "other",
+        msgType: "text",
+        msg: "WOW! it is!",
+        time: "25/04/2022 | 13:33",
+        },
     ]
 
 const NicolasChat = [
@@ -61,6 +86,19 @@ const NicolasChat = [
         msg: "I want to tell you something. Please don't tell anyone...",
         time: "25/04/2022 | 13:33",
         },
+    {
+        type: "other",
+        msgType: "audio",
+        msg: audio,
+        time: "25/04/2022 | 13:33",
+        },
+
+    {
+        type: "you",
+        msgType: "text",
+        msg: "ok ok tell me already",
+        time: "25/04/2022 | 13:33",
+        },
     ]
 
 const DanielChat = [
@@ -86,6 +124,27 @@ const DanielChat = [
         type: "you",
         msgType: "text",
         msg: "Everything is great. I got a promotion recently",
+        time: "25/04/2022 | 13:33",
+        },
+
+    {
+        type: "other",
+        msgType: "text",
+        msg: "niiiice. Maybe take a vacation to the maldives, take a look:",
+        time: "25/04/2022 | 13:33",
+        },
+
+    {
+        type: "other",
+        msgType: "video",
+        msg: maldivesVideo,
+        time: "25/04/2022 | 13:33",
+        },
+
+    {
+        type: "you",
+        msgType: "text",
+        msg: "wow that looks like a dream",
         time: "25/04/2022 | 13:33",
         },
     ]
