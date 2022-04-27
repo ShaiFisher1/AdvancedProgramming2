@@ -7,13 +7,15 @@
 
 ## About
 We created a Web client Using HTML, JavaScript, React, CSS.\
-The project has Registration screen, Login screen, and a Chat screen.
+The project has Registration screen, Login screen, and a Chat screen.\
+the project uses react-router and react-bootstrap packages.
 
 
 ## Dependencies
-* to do
-* to do
-* to do 
+* Download Node.js : https://nodejs.org/en/ which includes NPM (a package manager for NODE. Js) and will be installed\
+  on your computer when you install Node.js. 
+* to do?
+* to do?
 
 
 ## Instructions
@@ -28,9 +30,8 @@ The project has Registration screen, Login screen, and a Chat screen.
   and by clicking on any one of them, chat message history is shown.
 * Sending a new message:
   * Sending a new text message is done by typing and clicking the send button or by pressing Enter
-  * Sending a new voice message is done by clicking the link logo and then -
+  * Sending a new voice message is done by clicking the link logo and then -\
     pressing once on the microphone logo - to start the recording, and by pressing again - the recording is stopped and sent
   * Sending a new photo/video is done by clicking the photo/video logo and choosing a photo/video to send
 * Adding a new contact is done by pressing the logo with the plus sign, and entering an existing (hard coded) contact.\
   If an existing contact name was entered, the chat will appear with the message history.
-
