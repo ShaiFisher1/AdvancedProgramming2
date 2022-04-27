@@ -28,6 +28,7 @@ You can find the modules installed in package.json -> dependencies. When running
   Onced logged in you will be navigated to the Chat screen
 * When in the chat screen, the contacts of current user are shown on the left,\
   and by clicking on any one of them, chat message history is shown.
+* **The user we created has 7 contacts, 5 are shown when entering the Chat screen, and another contact with the name Emma LASTNAME, can be added**  
 * Sending a new message:
   * Sending a new text message is done by typing and clicking the send button or by pressing Enter
   * Sending a new voice message is done by clicking the link logo and then -\
