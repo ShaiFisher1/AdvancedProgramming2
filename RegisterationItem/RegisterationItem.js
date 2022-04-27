@@ -48,8 +48,8 @@ function RegisterationItem() {
             alert("Password must contain letters and numbers.");
             return;
         }
-        addUser(username, password, nickname, profileImg, new Map());
-        alert("registered");
+        addUser(username, password, nickname, profileImg, new Map(), new Array());
+        alert("registered successfully");
         navigate("/")
         return;
     }

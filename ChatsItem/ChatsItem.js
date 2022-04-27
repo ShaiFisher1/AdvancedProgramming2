@@ -5,10 +5,9 @@ import './ChatsItem.css';
 import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
-import { GetcurrentContact } from'../ContactItem/ContactItem.js';
 import MessageItem from '../MessageItem/MessageItem.js';
 import ContactItem from '../ContactItem/ContactItem.js';
-import { chats, ShaiChat, NicolasChat, DanielChat, RobertChat, AlissaChat } from '../ChatsData/ChatsContent';
+import { allChats, MorChats, ShaiChat, NicolasChat, DanielChat, RobertChat, AlissaChat } from '../ChatsData/ChatsContent';
 import { useParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
@@ -39,26 +38,26 @@ export function Home(){
   }
 
   function addMessage(messageInserted, currentTime, msgType) {
-    var message_obj = {type:"you", msg:messageInserted, time:currentTime, msgType:msgType}
+    var message_obj = {type: "you", msg: messageInserted, time: currentTime, msgType: msgType}
     if (currentcontact==="Shai Fisher") {
       ShaiChat.push(message_obj)
-      updatechat1len(prevlen => prevlen+1)
+      updateShaichatlen(prevlen => prevlen+1)
     } 
     else if (currentcontact==="Nicolas Cage") {
       NicolasChat.push(message_obj)
-      updatechat2len(prevlen => prevlen+1)
+      updateNicolaschatlen(prevlen => prevlen+1)
     } 
     else if (currentcontact==="Daniel Cohen") {
       DanielChat.push(message_obj)
-      updatechat3len(prevlen => prevlen+1)
+      updateDanielchatlen(prevlen => prevlen+1)
     } 
     else if (currentcontact==="Robert Taylor") {
       RobertChat.push(message_obj)
-      updatechat4len(prevlen => prevlen+1)
+      updateRobertchatlen(prevlen => prevlen+1)
     } 
     else if (currentcontact==="Alissa Violet") {
       AlissaChat.push(message_obj)
-      updatechat5len(prevlen => prevlen+1)
+      updateAlissachatlen(prevlen => prevlen+1)
     } else {
       alert("Choose a contact to send a message.")
     }
@@ -73,18 +72,28 @@ export function Home(){
   function newMessageImage(e) {
     var str = URL.createObjectURL(e.target.files[0]);
     addMessage(str,getCurrentDate(),"image")
-    updatechat1len(prevlen => prevlen +1)
   }
 
   function newMessageVideo(e) {
     var str = URL.createObjectURL(e.target.files[0]);
     addMessage(str,getCurrentDate(),"video")
-    updatechat1len(prevlen => prevlen +1)
   }
 
   const messagesLists1 = ShaiChat.map((message,key)=>{
-        return<MessageItem msg={message.msg} type={message.type} time={message.time} msgType={message.msgType} key={key}/>
+      return<MessageItem msg={message.msg} type={message.type} time={message.time} msgType={message.msgType} key={key}/>   
   }); 
+  // const messagesLists5 = AlissaChat.map((message,key)=>{
+  //   for (var i in usersData.get(userName).chats) {
+  //     if (usersData.get(userName).chats[i].name == "Alissa Violet") {
+  //       if (usersData.get(userName).chats[i].chat.length === 0) {
+  //         return;
+  //       }
+  //       else {
+  //         return<MessageItem msg={message.msg} type={message.type} time={message.time} msgType={message.msgType} key={key}/>
+  //       }
+  //     }
+  //   }
+  // }); 
 
   const messagesLists2 = NicolasChat.map((message,key)=>{
       return<MessageItem msg={message.msg} type={message.type} time={message.time} msgType={message.msgType} key={key}/>
@@ -121,36 +130,44 @@ export function Home(){
     setcurrentcontactImg(contImg)
   }
 
-  const ContactLists = chats.map((chatItem,key)=>{
-    return<ContactItem onContactChange={onContactChange} username={chatItem.name} nickname={usersData.get(chatItem.name).nickname} lastMessage={chatItem.chat.at(-1).msg} lastDate={chatItem.chat.at(-1).time} contactImage={(usersData.get(chatItem.name)).profileImage} key={key}/>
+  // const ContactLists = usersData.get(userName).chats.map((chatItem,key)=>{
+  //   if (chatItem.chat.length) {
+  //     return<ContactItem onContactChange={onContactChange} username={chatItem.name} nickname={usersData.get(chatItem.name).nickname} lastMessage={chatItem.chat.at(-1).msg} lastDate={chatItem.chat.at(-1).time} contactImage={(usersData.get(chatItem.name)).profileImage} key={key}/>
+  //   } else {
+  //     return<ContactItem onContactChange={onContactChange} username={chatItem.name} nickname={usersData.get(chatItem.name).nickname} lastMessage={""} lastDate={""} contactImage={(usersData.get(chatItem.name)).profileImage} key={key}/>
+  //   }
+  // }); 
+
+  const ContactLists = usersData.get(userName).chats.map((chatItem,key)=>{
+      return<ContactItem onContactChange={onContactChange} username={chatItem.name} nickname={usersData.get(chatItem.name).nickname} lastMessage={chatItem.chat.at(-1).msg} msgType={chatItem.chat.at(-1).msgType} contactImage={(usersData.get(chatItem.name)).profileImage} key={key}/>
   }); 
 
-  const [chat1len,updatechat1len] = useState(ShaiChat.length)
+  const [Shaichatlen,updateShaichatlen] = useState(ShaiChat.length)
   useEffect(() =>{
     setMessageHist(messagesLists1)
-  },[chat1len]);
+  },[Shaichatlen]);
 
-  const [chat2len,updatechat2len] = useState(NicolasChat.length)
+  const [Nicolaschatlen,updateNicolaschatlen] = useState(NicolasChat.length)
   useEffect(() =>{
     setMessageHist(messagesLists2)
-  },[chat2len]);
+  },[Nicolaschatlen]);
 
-  const [chat3len,updatechat3len] = useState(DanielChat.length)
+  const [Danielchatlen,updateDanielchatlen] = useState(DanielChat.length)
   useEffect(() =>{
     setMessageHist(messagesLists3)
-  },[chat3len]);
+  },[Danielchatlen]);
 
-  const [chat4len,updatechat4len] = useState(RobertChat.length)
+  const [Robertchatlen,updateRobertchatlen] = useState(RobertChat.length)
   useEffect(() =>{
     setMessageHist(messagesLists4)
-  },[chat4len]);
+  },[Robertchatlen]);
 
-  const [chat5len,updatechat5len] = useState(AlissaChat.length)
+  const [Alissachatlen,updateAlissachatlen] = useState(AlissaChat.length)
   useEffect(() =>{
     setMessageHist(messagesLists5)
-  },[chat5len]);
+  },[Alissachatlen]);
 
-  const [contactsLen,contactsUpdate] = useState(usersData.get(userName).contacts.size)
+  const [contactsLen,contactsUpdate] = useState(usersData.get(userName).contacts.length)
   useEffect(() =>{
     if(messagesHistory==null){
       setMessageHist(defaultmessagelist)
@@ -165,11 +182,18 @@ export function Home(){
     if (contact===userName) {
       alert("Error: user can not add itself.")
     }
-    if (usersData.get(userName).contacts.has(contact)) {
+    else if (usersData.get(userName).contacts.has(contact)) {
       alert("Contact was already added.")
     }
     else if (usersData.has(contact)) {
-      usersData.get(userName).contacts.set(contact, chats[contact]);
+      for (var i in allChats) {
+        if (allChats[i].name === contact) {
+          var chat_obj = {name: contact, chat: allChats[i].chat,}
+          usersData.get(userName).contacts.set(contact, allChats[i].chat);
+          usersData.get(userName).chats.push(chat_obj)
+          console.log(usersData.get(userName).chats)
+        }
+      }
       closeButton.current.click();
       contactsUpdate(prevcontactsLen => prevcontactsLen + 1);
       alert("Contact added.")
@@ -178,6 +202,38 @@ export function Home(){
     } 
     document.getElementById("Username").value = '';
   }
+
+  // function addContact() {
+  //   var contact = document.getElementById("Username").value;
+  //   if (contact===userName) {
+  //     alert("Error: user can not add itself.")
+  //   }
+  //   else if (usersData.get(userName).contacts.has(contact)) {
+  //     alert("Contact was already added.")
+  //   }
+  //   else if (usersData.has(contact)) {
+  //     if (userName === "Mor Siman Tov") {
+  //       for (var i in allChats) {
+  //         if (allChats[i].name === contact) {
+  //           var chat_obj = {name: contact, chat: allChats[i].chat,}
+  //           usersData.get(userName).contacts.set(contact, allChats[i].chat);
+  //           usersData.get(userName).chats.push(chat_obj)
+  //           console.log(usersData.get(userName).chats)
+  //         }
+  //     }
+  //     } else {
+  //       var chat_obj = {name: contact, chat: [],}
+  //       usersData.get(userName).contacts.set(contact, []);
+  //       usersData.get(userName).chats.push(chat_obj)
+  //     }
+  //     closeButton.current.click();
+  //     contactsUpdate(prevcontactsLen => prevcontactsLen + 1);
+  //     alert("Contact added.")
+  //   } else {
+  //     alert("Contact not found.")
+  //   } 
+  //   document.getElementById("Username").value = '';
+  // }
 
   let [audioURL, isRecording, startRecording, stopRecording] = useRecorder();
   
@@ -198,13 +254,15 @@ export function Home(){
 
   return (
     <div className="maincontainer">
-      <div className="container py-5 px-4">
-      <div className="row rounded-lg overflow-hidden shadow">
+      <div className="container py-5 px-4" id="container">
+      <div className="row rounded-lg overflow-hidden shadow" id="main-window">
         <div className="col-5 px-0">
           <div className="bg-white">
-            <div className="grey-header" class="bg-gray px-4 py-2 bg-light">
-              <div className="media"><img src={usersData.get(userName).profileImage} alt="user" width="30" className="rounded-circle" /></div>
-              <h6 className="mb-0" style={{color: 'black'}}>{usersData.get(userName).nickname}</h6>
+            <div id="grey-header" class="bg-gray px-4 py-2 bg-light">
+            <div className="username-picture">
+              <div className="media" id="image-holder"><img src={usersData.get(userName).profileImage} alt="user" width="30" className="rounded-circle" /></div>
+              <h6 className="mb-0" style={{color: 'black'}} id="user-name">{usersData.get(userName).nickname}</h6>
+            </div> 
               <a href="#myModal" className="icon-add" role="button" data-bs-toggle="modal">
                 <img className="img-icon" src="https://icon-library.com/images/contact-icon-png/contact-icon-png-18.jpg" alt=""></img>  
               </a>

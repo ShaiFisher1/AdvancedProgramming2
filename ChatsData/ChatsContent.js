@@ -127,7 +127,7 @@ const AlissaChat = [
     {
         type: "other",
         msgType: "text",
-        msg: "Hi Mor, I missed you!!",
+        msg: "Hi, I missed you so much!!",
         time: "25/04/2022 | 13:30",
     },
     {
@@ -144,10 +144,16 @@ const AlissaChat = [
         },
     ]
 
-export const chats = [{name: "Shai Fisher", chat: ShaiChat}, 
+export const MorChats = [{name: "Shai Fisher", chat: ShaiChat}, 
                       {name: "Nicolas Cage", chat: NicolasChat}, 
-                      {name: "Daniel Cohen", chat: DanielChat}, 
-                      {name: "Robert Taylor", chat: RobertChat}, 
-                      {name: "Alissa Violet", chat: AlissaChat},]
+                      {name: "Daniel Cohen", chat: DanielChat},]
+                   
+export const ShaiChats = []
+
+export const allChats = [{name: "Shai Fisher", chat: ShaiChat}, 
+                    {name: "Nicolas Cage", chat: NicolasChat}, 
+                    {name: "Daniel Cohen", chat: DanielChat},
+                    {name: "Robert Taylor", chat: RobertChat}, 
+                    {name: "Alissa Violet", chat: AlissaChat},]
 
 export { ShaiChat, NicolasChat, DanielChat, RobertChat, AlissaChat }
