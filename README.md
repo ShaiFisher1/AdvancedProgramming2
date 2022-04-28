@@ -13,13 +13,12 @@ You can find the modules installed in package.json -> dependencies. When running
 
 
 ## Dependencies
+* Download Node.js : https://nodejs.org/en/ which includes NPM (a package manager for NODE. Js) and will be installed on your computer when you install Node.js. 
 * Clone the repository
 * Install dependencies using:
   ```npm install```
 * Run using:
   ```npm start```  
-  
-* Download Node.js : https://nodejs.org/en/ which includes NPM (a package manager for NODE. Js) and will be installed on your computer when you install Node.js. 
 * The project uses react-router and react-bootstrap packages.
 * Modules installed can be found in package.json -> dependencies
 
