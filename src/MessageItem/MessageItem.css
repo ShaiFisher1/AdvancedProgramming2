@@ -1,0 +1,43 @@
+.you {
+}
+
+.other {
+    width: 100%;
+    margin-left: auto;
+    
+}
+
+.media-w-50 {
+    margin-left: 70%;
+    align-items: center;
+    /* width: fit-content;
+    height: fit-content; */
+}
+
+.msg-img {
+    /* display: flex;
+    align-items: center;
+    width: 250px;
+    height: 150px; */
+    width: 60%;
+    height: 60%;
+    align-items: center;
+    display: flex;
+
+}
+
+.msg-video {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 150px;
+}
+
+.msg-audio {
+    color: blue;
+}
+
+#message {
+    width: fit-content
+}
