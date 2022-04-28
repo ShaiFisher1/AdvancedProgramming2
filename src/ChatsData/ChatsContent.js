@@ -4,9 +4,9 @@
    by typing in the username.
 */
 
-import TextImage from '../Images/TextImage.png'
-import maldivesVideo from '../Images/maldivesVideo.mp4'
-import audio from '../Images/Images_audio.ogg'
+import TextImage from '../Media/TextImage.png'
+import maldivesVideo from '../Media/maldivesVideo.mp4'
+import audio from '../Media/Images_audio.ogg'
 
 const ShaiChat = [
     {
