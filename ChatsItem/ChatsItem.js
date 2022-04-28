@@ -255,7 +255,7 @@ export function Home(){
           </div>
         </div>
         <div className="col-7 px-0">
-          <div className="bg-gray px-4 py-2 bg-light">
+          <div className="bg-gray px-4 py-2 bg-light" id="right-grey-header">
               <div className="media"><img src={currentcontactImg} alt="" width="30" className="rounded-circle" /></div>
               <h6 className="mb-0" style={{color: 'black'}}>{currentcontactnickname}</h6>
           </div>

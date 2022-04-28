@@ -9,17 +9,18 @@
 
 .media-w-50 {
     margin-left: 70%;
-    width: fit-content;
+    align-items: center;
 }
 
 .msg-img {
-    display: flex;
+    width: 100%;
+    height: 60%;
     align-items: center;
-    width: 250px;
-    height: 150px;
+    display: flex;
 }
 
 .msg-video {
+    width: fit-content;
     display: flex;
     align-items: center;
     width: 250px;

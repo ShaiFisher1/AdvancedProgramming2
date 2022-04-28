@@ -111,6 +111,10 @@ strong{color: blue;}
   align-items: center;
 }
 
+#right-grey-header {
+  height: 70px;
+}
+
 .username-picture {
   display: flex;
   flex-direction: column;
