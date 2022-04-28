@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Advanced Programming 2 Web Client: 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+1. [About](#About)
+2. [Dependencies](#Dependencies)
+3. [Instructions](#Instructions)
 
-In the project directory, you can run:
+## About
+We created a Web client Using HTML, JavaScript, React, CSS.\
+The project has a Registration screen, a Login screen and a Chat screen.\
+**The project uses react-router and react-bootstrap packages.**
+You can find the modules installed in package.json -> dependencies. When running ```npm install``` installations are made according to this file
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Dependencies
+* Clone the repository
+* Install dependencies using:
+  ```npm install```
+* Run using:
+  ```npm start```  
+  
+* Download Node.js : https://nodejs.org/en/ which includes NPM (a package manager for NODE. Js) and will be installed on your computer when you install Node.js. 
+* The project uses react-router and react-bootstrap packages.
+* Modules installed can be found in package.json -> dependencies
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Instructions
+* In order to log in with the user we created please enter the following:\
+**Username: Mor Siman Tov**\
+**Password: 1234567u**
+* Running the program leads to the Login screen (run by opening the terminal and then ```npm start```)
+* If not already registered, by pressing the "Click here" button you will be navigated to the Registration screen.
+* By entering a correct registered (and for now hard coded) username and password, you will be able to log in.\
+  Onced logged in you will be navigated to the Chat screen.
+* When in the chat screen, the contacts of current user are shown on the left,\
+  and by clicking on any one of them, chat message history is shown.
+* **The user we created (by the username "Mor Siman Tov") has 6 contacts, 5 are shown when entering the Chat screen and have exisiting chats containing messages of type text, image, video and audio. There is another contact with the username "Emma Watson", that can be added by clicking the "add" button on the top right of the chat screen.**  
+* Sending a new message:
+  * Sending a new text message is done by typing and clicking the send button or by pressing Enter
+  * Sending a new voice message is done by clicking the link logo and then -\
+    pressing one time on the microphone icon - to start the recording, and by pressing again on the same button - the recording is stopped and sent.
+  * Sending a new photo/video is done by clicking the photo/video icon and choosing a photo/video to send.
+* Adding a new contact is done by pressing the logo with the plus sign, and entering an existing (hard coded) contact. If an existing contact name was entered, the chat will appear with its message history.
