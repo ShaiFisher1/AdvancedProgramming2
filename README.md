@@ -2,7 +2,7 @@
 
 
 1. [About](#About)
-2. [Installation](#Installation)
+2. [Dependencies](#Dependencies)
 3. [Instructions](#Instructions)
 
 ## About
@@ -13,6 +13,12 @@ You can find the modules installed in package.json -> dependencies. When running
 
 
 ## Dependencies
+* Clone the repository
+* Install dependencies:
+  ```npm install```
+* Run using:
+  ```npm start```  
+  
 * Download Node.js : https://nodejs.org/en/ which includes NPM (a package manager for NODE. Js) and will be installed on your computer when you install Node.js. 
 * The project uses react-router and react-bootstrap packages.
 * Modules installed can be found in package.json -> dependencies
