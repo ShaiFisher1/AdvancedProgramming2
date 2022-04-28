@@ -14,7 +14,7 @@ You can find the modules installed in package.json -> dependencies. When running
 
 ## Dependencies
 * Clone the repository
-* Install dependencies:
+* Install dependencies using:
   ```npm install```
 * Run using:
   ```npm start```  
